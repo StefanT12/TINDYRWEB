@@ -10,18 +10,18 @@ using System.Threading.Tasks;
 
 namespace Persistence
 {
-    public class WebshopDbContext : DbContext, IDbContext
+    public class TindyrDbContext : DbContext, IDbContext
     {
         private readonly IAppUser _currentUserService;
         private readonly IDateTime _dateTime;
         #region ctor
-        public WebshopDbContext(DbContextOptions<WebshopDbContext> options)
+        public TindyrDbContext(DbContextOptions<TindyrDbContext> options)
             : base(options)
         {
         }
 
-        public WebshopDbContext(
-            DbContextOptions<WebshopDbContext> options,
+        public TindyrDbContext(
+            DbContextOptions<TindyrDbContext> options,
             IAppUser currentUserService, //TODO at the moment we handle it
             IDateTime dateTime)
             : base(options)
@@ -56,7 +56,7 @@ namespace Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(WebshopDbContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(TindyrDbContext).Assembly);
         }
     }
 }

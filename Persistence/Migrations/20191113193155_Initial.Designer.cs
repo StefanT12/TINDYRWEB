@@ -8,7 +8,7 @@ using Persistence;
 
 namespace Persistence.Migrations
 {
-    [DbContext(typeof(WebshopDbContext))]
+    [DbContext(typeof(TindyrDbContext))]
     [Migration("20191113193155_Initial")]
     partial class Initial
     {

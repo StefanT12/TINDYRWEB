@@ -9,10 +9,10 @@ namespace Persistence
     {
         public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<WebshopDbContext>(options =>
+            services.AddDbContext<TindyrDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("LocalAppDb")));
 
-            services.AddScoped<IDbContext>(provider => provider.GetService<WebshopDbContext>());
+            services.AddScoped<IDbContext>(provider => provider.GetService<TindyrDbContext>());
 
             return services;
         }

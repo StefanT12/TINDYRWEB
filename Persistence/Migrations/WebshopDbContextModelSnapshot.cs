@@ -7,7 +7,7 @@ using Persistence;
 
 namespace Persistence.Migrations
 {
-    [DbContext(typeof(WebshopDbContext))]
+    [DbContext(typeof(TindyrDbContext))]
     partial class WebshopDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

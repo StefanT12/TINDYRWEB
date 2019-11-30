@@ -43,7 +43,7 @@ namespace Tindyr.Areas.Auth.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(LogInModel reg)
         {
-            if(!ModelState.IsValid)
+            if(!ModelState.IsValid)//one never knows how the user can push info, we check validation again
             {
                 return Register();
             }
@@ -52,7 +52,7 @@ namespace Tindyr.Areas.Auth.Controllers
 
             if (registered.Succeeded == false)
             {
-                TempData[TempDataVar.Msg] = registered.Error;
+                TempData[TempDataVar.Msg] = registered.Error;//this is a 'database' error
                 return Register();
             }
 
