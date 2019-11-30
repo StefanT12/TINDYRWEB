@@ -22,11 +22,11 @@ namespace Persistence
 
         public WebshopDbContext(
             DbContextOptions<WebshopDbContext> options,
-            //ICurrentUserService currentUserService, //TODO at the moment we handle it
+            IAppUser currentUserService, //TODO at the moment we handle it
             IDateTime dateTime)
             : base(options)
         {
-            //_currentUserService = currentUserService;
+            _currentUserService = currentUserService;
             _dateTime = dateTime;
         }
         #endregion
