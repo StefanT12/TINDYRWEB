@@ -87,12 +87,20 @@ namespace Tindyr
 
             app.UseAuthorization();
 
+            app.UseRouting();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapAreaControllerRoute(
+                    name: "Auth",
+                    areaName: "Auth",
+                    pattern: "Auth/{controller=Auth}/{action=LogIn}/{id?}"
+                    );
             });
+
         }
     }
 }

@@ -12,15 +12,13 @@ using Tindyr.CQRS.CMMD;
 
 namespace Tindyr.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IMediator _mediatr;
-        public HomeController(ILogger<HomeController> logger, IMediator mediatr)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _mediatr = mediatr;
-        }
+        } 
 
         public IActionResult Index()
         {
