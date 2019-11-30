@@ -1,0 +1,1 @@
+﻿The Domain is The Holy Land, this is where all entities who reflect the database are stored. Its the heart of the app, because everything else operates on these entities

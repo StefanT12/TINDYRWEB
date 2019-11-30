@@ -1,0 +1,2 @@
+﻿Imagine you have an extension, a function that you create to solve some annoying issue, like saving in xml or creating a class object based on your text file.
+This is where it should be, so that all branches of this project can then use it

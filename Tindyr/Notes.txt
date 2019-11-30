@@ -1,0 +1,1 @@
+﻿This is the face of our application, it also contains all dependencies to all frameworks needed.

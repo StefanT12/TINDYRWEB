@@ -30,16 +30,18 @@ namespace Tindyr
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //every layer of the project, Application, ApplicationUser etc has a dependency injection extension of Services, we use that here to add all dependencies we need for these layers and to initialize/use them.
+            //the mediator pattern, we first init the dependency injection 'helper'
             services.AddMediatR(Assembly.GetExecutingAssembly());
-
+            //the business logic and all its dependencies
             services.AddApplication();
-
+            //db and its dependencies
             services.AddPersistence(Configuration);
-
+            //MVC 
             services.AddControllersWithViews();
-
+            //for http requests
             services.AddHttpContextAccessor();
-
+            //add cookies support (for session info)
             # region cookies policy
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -48,10 +50,11 @@ namespace Tindyr
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
             #endregion
-
+            //add AppllicationUser - anything user log in out etc - and its dependencies
             services.AddApplicationUser();
 
-            // Register the Swagger services
+            // Register the Swagger services - curently not working - we use swagger to hide backend and expose only API calls to it so front end can do whatever it wants without affecting the backend
+            //theoretically, with this, we may not even need MVC, but we will skip Swagger in future versions :)
             services.AddSwaggerDocument();
         }
 
