@@ -6,3 +6,11 @@ C:\Users\Intel\source\repos\CQRSMED\Common\obj\Debug\netcoreapp3.0\Common.Assemb
 C:\Users\Intel\source\repos\CQRSMED\Common\obj\Debug\netcoreapp3.0\Common.AssemblyInfo.cs
 C:\Users\Intel\source\repos\CQRSMED\Common\obj\Debug\netcoreapp3.0\Common.dll
 C:\Users\Intel\source\repos\CQRSMED\Common\obj\Debug\netcoreapp3.0\Common.pdb
+C:\Users\Intel\source\repos\TINDYRWEB\Common\bin\Debug\netcoreapp3.0\Common.deps.json
+C:\Users\Intel\source\repos\TINDYRWEB\Common\bin\Debug\netcoreapp3.0\Common.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Common\bin\Debug\netcoreapp3.0\Common.pdb
+C:\Users\Intel\source\repos\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.csprojAssemblyReference.cache
+C:\Users\Intel\source\repos\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.AssemblyInfoInputs.cache
+C:\Users\Intel\source\repos\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.AssemblyInfo.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.pdb
