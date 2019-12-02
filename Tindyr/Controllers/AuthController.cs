@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Application.Common.Interfaces;
 using Application.Users.Commands.CreateUser;
 using Microsoft.AspNetCore.Mvc;
-using Tindyr.Areas.Auth.Models;
+using Tindyr.Models.Auth;
 using Tindyr.Controllers;
 using Tindyr.Extensions;
 
-namespace Tindyr.Areas.Auth.Controllers
+namespace Tindyr.Controllers
 {
     public class AuthController : BaseController
     {
@@ -32,7 +32,9 @@ namespace Tindyr.Areas.Auth.Controllers
                 return ViewRedirect.BackHome;
             }
 
-            return LogIn();
+            TempData[TempDataVar.Msg] = logged.Error;
+
+            return View();
         }
 
         public IActionResult Register()
@@ -45,7 +47,7 @@ namespace Tindyr.Areas.Auth.Controllers
         {
             if(!ModelState.IsValid)//one never knows how the user can push info, we check validation again
             {
-                return Register();
+                return View("Register");
             }
 
             var registered = await (Mediator.Send(new CreateUser { UserName = reg.Username, UserPass = reg.Password }));//send a command to the Application Layer, 
@@ -53,10 +55,10 @@ namespace Tindyr.Areas.Auth.Controllers
             if (registered.Succeeded == false)
             {
                 TempData[TempDataVar.Msg] = registered.Error;//this is a 'database' error
-                return Register();
+                return View("Register");
             }
 
-            return LogIn();
+            return View("LogIn");
         }
 
     }

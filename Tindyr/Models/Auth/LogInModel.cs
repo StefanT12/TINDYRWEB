@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Tindyr.Areas.Auth.Models
+namespace Tindyr.Models.Auth
 {
     public class LogInModel
     {

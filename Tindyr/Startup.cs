@@ -94,11 +94,11 @@ namespace Tindyr
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapAreaControllerRoute(
-                    name: "Auth",
-                    areaName: "Auth",
-                    pattern: "Auth/{controller=Auth}/{action=LogIn}/{id?}"
-                    );
+                //endpoints.MapAreaControllerRoute(
+                //    name: "Auth",
+                //    areaName: "Auth",
+                //    pattern: "Auth/{controller=Auth}/{action=LogIn}/{id?}"
+                //    );
             });
 
         }

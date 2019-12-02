@@ -77,8 +77,6 @@ C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Common.pdb
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Domain.pdb
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.Views.pdb
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.csproj.CopyComplete
-C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Areas\Auth\Views\Shared\_ViewImports.cshtml.g.cs
-C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Areas\Auth\Views\Shared\_ViewStart.cshtml.g.cs
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -153,3 +151,5 @@ C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\zh-Hans\Mic
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Auth\LogIn.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Auth\Register.cshtml.g.cs
