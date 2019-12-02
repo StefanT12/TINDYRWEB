@@ -9,7 +9,7 @@ namespace Application.Common.Models
         internal Result(bool succeeded, string error)
         {
             Succeeded = succeeded;
-            Error = Error;
+            Error = error;
         }
 
         public bool Succeeded { get; set; }

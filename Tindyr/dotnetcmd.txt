@@ -1,2 +1,0 @@
-﻿dotnet ef migrations add [whatev] -s ..\CQRSMED\CQRSMED.csproj
-dotnet ef database update -s ..\CQRSMED\CQRSMED.csproj
