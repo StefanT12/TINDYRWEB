@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Tindyr\\Tindyr.csproj": {}
+    "D:\\Tindyr\\TINDYRWEB\\Tindyr\\Tindyr.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj": {
+    "D:\\Tindyr\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj",
+        "projectUniqueName": "D:\\Tindyr\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj",
         "projectName": "ApplicationUser",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\obj\\",
+        "projectPath": "D:\\Tindyr\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj",
+        "packagesPath": "C:\\Users\\denit\\.nuget\\packages\\",
+        "outputPath": "D:\\Tindyr\\TINDYRWEB\\ApplicationUser\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\denit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,14 +30,14 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj"
+              "D:\\Tindyr\\TINDYRWEB\\Application\\Application.csproj": {
+                "projectPath": "D:\\Tindyr\\TINDYRWEB\\Application\\Application.csproj"
               },
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj"
+              "D:\\Tindyr\\TINDYRWEB\\Common\\Common.csproj": {
+                "projectPath": "D:\\Tindyr\\TINDYRWEB\\Common\\Common.csproj"
               },
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj"
+              "D:\\Tindyr\\TINDYRWEB\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Tindyr\\TINDYRWEB\\Domain\\Domain.csproj"
               }
             }
           }
@@ -109,20 +109,20 @@
         }
       }
     },
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj": {
+    "D:\\Tindyr\\TINDYRWEB\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Tindyr\\TINDYRWEB\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\obj\\",
+        "projectPath": "D:\\Tindyr\\TINDYRWEB\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\denit\\.nuget\\packages\\",
+        "outputPath": "D:\\Tindyr\\TINDYRWEB\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\denit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -135,8 +135,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj"
+              "D:\\Tindyr\\TINDYRWEB\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Tindyr\\TINDYRWEB\\Domain\\Domain.csproj"
               }
             }
           }
@@ -198,20 +198,20 @@
         }
       }
     },
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj": {
+    "D:\\Tindyr\\TINDYRWEB\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\Tindyr\\TINDYRWEB\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\obj\\",
+        "projectPath": "D:\\Tindyr\\TINDYRWEB\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\denit\\.nuget\\packages\\",
+        "outputPath": "D:\\Tindyr\\TINDYRWEB\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\denit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -253,20 +253,20 @@
         }
       }
     },
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj": {
+    "D:\\Tindyr\\TINDYRWEB\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Tindyr\\TINDYRWEB\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\obj\\",
+        "projectPath": "D:\\Tindyr\\TINDYRWEB\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\denit\\.nuget\\packages\\",
+        "outputPath": "D:\\Tindyr\\TINDYRWEB\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\denit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -308,20 +308,20 @@
         }
       }
     },
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Persistence\\Persistence.csproj": {
+    "D:\\Tindyr\\TINDYRWEB\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "D:\\Tindyr\\TINDYRWEB\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Persistence\\obj\\",
+        "projectPath": "D:\\Tindyr\\TINDYRWEB\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\denit\\.nuget\\packages\\",
+        "outputPath": "D:\\Tindyr\\TINDYRWEB\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\denit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -334,8 +334,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj"
+              "D:\\Tindyr\\TINDYRWEB\\Application\\Application.csproj": {
+                "projectPath": "D:\\Tindyr\\TINDYRWEB\\Application\\Application.csproj"
               }
             }
           }
@@ -395,20 +395,20 @@
         }
       }
     },
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Tindyr\\Tindyr.csproj": {
+    "D:\\Tindyr\\TINDYRWEB\\Tindyr\\Tindyr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Tindyr\\Tindyr.csproj",
+        "projectUniqueName": "D:\\Tindyr\\TINDYRWEB\\Tindyr\\Tindyr.csproj",
         "projectName": "Tindyr",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Tindyr\\Tindyr.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Tindyr\\obj\\",
+        "projectPath": "D:\\Tindyr\\TINDYRWEB\\Tindyr\\Tindyr.csproj",
+        "packagesPath": "C:\\Users\\denit\\.nuget\\packages\\",
+        "outputPath": "D:\\Tindyr\\TINDYRWEB\\Tindyr\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\denit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -421,14 +421,14 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj"
+              "D:\\Tindyr\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj": {
+                "projectPath": "D:\\Tindyr\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj"
               },
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj"
+              "D:\\Tindyr\\TINDYRWEB\\Application\\Application.csproj": {
+                "projectPath": "D:\\Tindyr\\TINDYRWEB\\Application\\Application.csproj"
               },
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Persistence\\Persistence.csproj"
+              "D:\\Tindyr\\TINDYRWEB\\Persistence\\Persistence.csproj": {
+                "projectPath": "D:\\Tindyr\\TINDYRWEB\\Persistence\\Persistence.csproj"
               }
             }
           }
