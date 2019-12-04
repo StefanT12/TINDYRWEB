@@ -13,3 +13,11 @@ C:\Users\Intel\source\repos\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.Asse
 C:\Users\Intel\source\repos\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.AssemblyInfo.cs
 C:\Users\Intel\source\repos\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.pdb
+D:\Tindyr\TINDYRWEB\Common\bin\Debug\netcoreapp3.0\Common.deps.json
+D:\Tindyr\TINDYRWEB\Common\bin\Debug\netcoreapp3.0\Common.dll
+D:\Tindyr\TINDYRWEB\Common\bin\Debug\netcoreapp3.0\Common.pdb
+D:\Tindyr\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.csprojAssemblyReference.cache
+D:\Tindyr\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.AssemblyInfoInputs.cache
+D:\Tindyr\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.AssemblyInfo.cs
+D:\Tindyr\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.dll
+D:\Tindyr\TINDYRWEB\Common\obj\Debug\netcoreapp3.0\Common.pdb

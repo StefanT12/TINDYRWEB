@@ -29,6 +29,35 @@
     </div>
 </div>
 
+<link rel="stylesheet" href="~/css/login.css" />
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="active"> Sign In </h2>
+        <h2 asp-area="" asp-controller="Auth" asp-action="Register" class="inactive underlineHover">Sign Up </h2>
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="https://image.flaticon.com/icons/svg/326/326975.svg" id="icon" alt="User Icon" />
+        </div>
+
+        <!-- Login Form -->
+        <form asp-action="LogIn" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Username" type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+            <span asp-validation-for="Username" class="text-danger"></span>
+            <input asp-for="Password" type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+            <span asp-validation-for="Password" class="text-danger"></span>
+            <input type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+
+    </div>
+</div>
 <a asp-area="" asp-controller="Auth" asp-action="Register">Register</a>
 
 <p class="text-info">@TempData[Tindyr.Extensions.TempDataVar.Msg]</p>
