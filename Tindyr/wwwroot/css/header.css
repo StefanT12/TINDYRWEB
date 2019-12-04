@@ -1,0 +1,88 @@
+﻿body {
+    margin: 0;
+}
+
+header {
+    display:grid;
+}
+
+nav {
+    margin: 45px 45px 0 45px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+    nav > a {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 700;
+        font-size: 2.25em;
+        color: #F15D68;
+        text-decoration: none;
+    }
+
+    nav > ul {
+        justify-self: end;
+    }
+
+    nav > ul > li {
+        display: inline;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        padding-right: 40px;
+        justify-items: end;
+    }
+
+    nav > ul > li > a {
+        text-decoration: none;
+        color: #000000;
+     
+        }
+
+/* Making it responsive */
+
+    .icon {
+        display: none;
+    }
+
+/* When the screen is less than 739 pixels wide, hide all ul elements and instead show the icon */
+@media screen and (max-width: 739px) {
+    nav ul {
+        display: none;
+    }
+
+    nav a.icon {
+        float: right;
+        display: grid;
+        color: #534F4F;
+        justify-items: end;
+    }
+}
+
+/* When the screen is less than 739 pixels wide, hide all ul elements and instead show the clickable icon */
+
+@media screen and (max-width: 739px) {
+    nav.responsive {
+        position: relative;
+    }
+
+    .responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: scale(1.1);
+    }
+
+    nav.responsive ul {
+        display: grid;
+        margin-top: 45px;
+        text-align: right;
+    }
+
+    nav.responsive ul > li {
+        padding: 0 0 15px 0;
+    }
+}
