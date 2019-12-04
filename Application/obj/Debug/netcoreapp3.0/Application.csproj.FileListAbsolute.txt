@@ -20,3 +20,14 @@ C:\Users\Intel\source\repos\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Applic
 C:\Users\Intel\source\repos\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.csproj.CopyComplete
 C:\Users\Intel\source\repos\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.pdb
+E:\school\Git\TINDYRWEB\Application\bin\Debug\netcoreapp3.0\Application.deps.json
+E:\school\Git\TINDYRWEB\Application\bin\Debug\netcoreapp3.0\Application.dll
+E:\school\Git\TINDYRWEB\Application\bin\Debug\netcoreapp3.0\Application.pdb
+E:\school\Git\TINDYRWEB\Application\bin\Debug\netcoreapp3.0\Domain.dll
+E:\school\Git\TINDYRWEB\Application\bin\Debug\netcoreapp3.0\Domain.pdb
+E:\school\Git\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.csprojAssemblyReference.cache
+E:\school\Git\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.AssemblyInfoInputs.cache
+E:\school\Git\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.AssemblyInfo.cs
+E:\school\Git\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.csproj.CopyComplete
+E:\school\Git\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.dll
+E:\school\Git\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.pdb

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj": {}
+    "E:\\school\\Git\\TINDYRWEB\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj": {
+    "E:\\school\\Git\\TINDYRWEB\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj",
+        "projectUniqueName": "E:\\school\\Git\\TINDYRWEB\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\obj\\",
+        "projectPath": "E:\\school\\Git\\TINDYRWEB\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Mo\\.nuget\\packages\\",
+        "outputPath": "E:\\school\\Git\\TINDYRWEB\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj"
+              "E:\\school\\Git\\TINDYRWEB\\Domain\\Domain.csproj": {
+                "projectPath": "E:\\school\\Git\\TINDYRWEB\\Domain\\Domain.csproj"
               }
             }
           }
@@ -89,24 +89,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj": {
+    "E:\\school\\Git\\TINDYRWEB\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj",
+        "projectUniqueName": "E:\\school\\Git\\TINDYRWEB\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\obj\\",
+        "projectPath": "E:\\school\\Git\\TINDYRWEB\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Mo\\.nuget\\packages\\",
+        "outputPath": "E:\\school\\Git\\TINDYRWEB\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -144,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

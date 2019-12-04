@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj": {}
+    "E:\\school\\Git\\TINDYRWEB\\Common\\Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj": {
+    "E:\\school\\Git\\TINDYRWEB\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj",
+        "projectUniqueName": "E:\\school\\Git\\TINDYRWEB\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\obj\\",
+        "projectPath": "E:\\school\\Git\\TINDYRWEB\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\Mo\\.nuget\\packages\\",
+        "outputPath": "E:\\school\\Git\\TINDYRWEB\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
