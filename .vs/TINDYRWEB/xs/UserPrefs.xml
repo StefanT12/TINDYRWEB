@@ -1,0 +1,58 @@
+﻿<Properties StartupConfiguration="{43364C45-480A-4780-99D3-DAA7EF9D461E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Domain/Entities/Friendship.cs">
+    <Files>
+      <File FileName="Domain/Entities/User.cs" Line="22" Column="39" />
+      <File FileName="Domain/Entities/Animal.cs" Line="14" Column="8" />
+      <File FileName="Application/Users/Commands/UpdateUserProfile/UpdateUserProfile.cs" Line="27" Column="56" />
+      <File FileName="Domain/Entities/UserProfile.cs" Line="16" Column="29" />
+      <File FileName="Domain/Entities/Picture.cs" Line="10" Column="9" />
+      <File FileName="Domain/Entities/Message.cs" Line="21" Column="5" />
+      <File FileName="Domain/Entities/Friendship.cs" Line="28" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TINDYRWEB" expanded="True">
+            <Node name="Core" expanded="True">
+              <Node name="Application" expanded="True">
+                <Node name="Common" expanded="True">
+                  <Node name="Interfaces" expanded="True" />
+                </Node>
+                <Node name="Users" expanded="True">
+                  <Node name="Commands" expanded="True">
+                    <Node name="UpdateUserProfile" expanded="True" />
+                  </Node>
+                  <Node name="Queries" expanded="True">
+                    <Node name="GetProfile" expanded="True" />
+                    <Node name="GetUser" expanded="True" />
+                    <Node name="GetUserList" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Domain" expanded="True">
+                <Node name="Common" expanded="True" />
+                <Node name="Entities" expanded="True">
+                  <Node name="Friendship.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="Infrastructure" expanded="True">
+              <Node name="ApplicationUser" expanded="True" />
+              <Node name="Tindyr" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Infrastructure.Tindyr PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
