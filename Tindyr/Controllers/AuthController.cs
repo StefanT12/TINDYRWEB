@@ -43,11 +43,17 @@ namespace Tindyr.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(LogInModel reg)
+        public async Task<IActionResult> Register(RegisterModel reg)
         {
             if(!ModelState.IsValid)//one never knows how the user can push info, we check validation again
             {
-                return View("Register");
+                return View();
+            }
+
+            if (!reg.ConfirmModel)
+            {
+                TempData[TempDataVar.Msg] = "Username or password does not match";
+                return View();
             }
 
             var registered = await (Mediator.Send(new CreateUser { UserName = reg.Username, UserPass = reg.Password }));//send a command to the Application Layer, 
@@ -55,7 +61,7 @@ namespace Tindyr.Controllers
             if (registered.Succeeded == false)
             {
                 TempData[TempDataVar.Msg] = registered.Error;//this is a 'database' error
-                return View("Register");
+                return View();
             }
 
             return View("LogIn");
