@@ -15,6 +15,22 @@
 
 <body>
     <header>
+        <!-- Mini Navigation (Log in/Sign up) -->
+        <div class="mini-nav">
+            <ul>
+                <li>
+                    <i class="fas fa-caret-right"></i>
+                    <a asp-area="" asp-controller="Auth" asp-action="LogIn">Log in</a>
+                </li>
+
+                <li>
+                    <i class="fas fa-caret-right"></i>
+                    <a asp-area="" asp-controller="Auth" asp-action="Register">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Logo and Main navigation -->
         <nav class="nav-container" id="nav">
 
             <a asp-area="" asp-controller="Home" asp-action="Index">Tindyr</a>

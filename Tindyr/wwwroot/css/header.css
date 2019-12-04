@@ -2,12 +2,39 @@
     margin: 0;
 }
 
-header {
-    display:grid;
+/* Mini Navigation (icons) */
+.mini-nav {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30px auto;
+    margin: 0 45px 0 45px;
 }
 
+    .mini-nav > ul {
+        justify-self: end;
+    }
+
+    .mini-nav ul > li {
+        display: inline;
+    }
+
+        .mini-nav ul > li:not(:last-child) {
+            padding-right: 25px;
+        }
+
+    .mini-nav li > a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+.fa-caret-right {
+    color: #F15D68;
+}
+/* NAVIGATION */
 nav {
-    margin: 45px 45px 0 45px;
+    margin: 0 45px 0 45px;
     display: grid;
     grid-template-columns: auto auto;
 }
@@ -15,7 +42,7 @@ nav {
     nav > a {
         font-family: 'Work Sans', sans-serif;
         font-weight: 700;
-        font-size: 2.25em;
+        font-size: 36px;
         color: #F15D68;
         text-decoration: none;
     }
@@ -24,41 +51,52 @@ nav {
         justify-self: end;
     }
 
-    nav > ul > li {
-        display: inline;
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 29px;
-        color: #000000;
-        padding-right: 40px;
-        justify-items: end;
-    }
-
-    nav > ul > li > a {
-        text-decoration: none;
-        color: #000000;
-     
+        nav > ul > li {
+            display: inline;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            justify-items: end;
         }
+
+            nav > ul > li:not(:last-child) {
+                padding-right: 40px;
+            }
+
+            nav > ul > li > a {
+                text-decoration: none;
+                color: #000000;
+            }
 
 /* Making it responsive */
 
-    .icon {
-        display: none;
-    }
+.icon {
+    display: none;
+}
 
 /* When the screen is less than 739 pixels wide, hide all ul elements and instead show the icon */
 @media screen and (max-width: 739px) {
-    nav ul {
-        display: none;
+    nav {
+        margin: 0 15px 0 15px;
     }
 
-    nav a.icon {
-        float: right;
-        display: grid;
-        color: #534F4F;
-        justify-items: end;
+        nav ul {
+            display: none;
+        }
+
+        nav a.icon {
+            float: right;
+            display: grid;
+            color: #534F4F;
+            justify-items: end;
+        }
+
+    .mini-nav {
+        margin: 0 15px 0 15px;
+        padding-bottom: 15px;
     }
 }
 
@@ -82,7 +120,7 @@ nav {
         text-align: right;
     }
 
-    nav.responsive ul > li {
-        padding: 0 0 15px 0;
-    }
+        nav.responsive ul > li {
+            padding: 0 0 15px 0;
+        }
 }
