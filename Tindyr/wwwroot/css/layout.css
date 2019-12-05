@@ -1,5 +1,11 @@
-﻿body {
+﻿html {
+    height: 100%;
+}
+
+body {
     margin: 0;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 /* Mini Navigation (icons) */
@@ -32,13 +38,14 @@
 .fa-caret-right {
     color: #F15D68;
 }
-/* NAVIGATION */
+/*** MAIN NAVIGATION ***/
 nav {
     margin: 0 45px 0 45px;
     display: grid;
     grid-template-columns: auto auto;
 }
 
+    /* LOGO */
     nav > a {
         font-family: 'Work Sans', sans-serif;
         font-weight: 700;
@@ -47,6 +54,7 @@ nav {
         text-decoration: none;
     }
 
+    /* MENU ITEMS */
     nav > ul {
         justify-self: end;
     }
@@ -98,11 +106,7 @@ nav {
         margin: 0 15px 0 15px;
         padding-bottom: 15px;
     }
-}
 
-/* When the screen is less than 739 pixels wide, hide all ul elements and instead show the clickable icon */
-
-@media screen and (max-width: 739px) {
     nav.responsive {
         position: relative;
     }
@@ -123,4 +127,101 @@ nav {
         nav.responsive ul > li {
             padding: 0 0 15px 0;
         }
+}
+
+/*** Content ***/
+/* We are setting the min-height, so the footer can always appear at the bottom of the screen */
+.content {
+    min-height: 85%;
+    margin: 0 auto -50px;
+}
+
+/*** Footer ***/
+footer {
+    background-color: #F15D68;
+    display: grid;
+    grid-template-columns: 2fr auto auto;
+    padding: 0 45px 0 45px;
+}
+
+    /* Description and Copyright */
+    footer > section > h3 {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        margin: 15px 0;
+    }
+
+    footer > section > p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: white;
+        max-width: 450px;
+    }
+
+.copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+}
+
+/* Product and Contact */
+footer > section > h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin: 15px 0;
+}
+
+section > ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+    section > ul > li {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        color: white;
+        padding-bottom: 5px;
+    }
+
+        section > ul > li > a {
+            text-decoration: none;
+            color: white;
+        }
+
+footer > section:not(:first-child) {
+    margin-left: 100px;
+}
+
+footer > p {
+    display: none;
+}
+
+/* Footer responsiveness */
+@media screen and (max-width: 739px) {
+    footer {
+        padding: 0 15px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+        footer > section:first-child {
+            display: none;
+        }
+
+        footer > p {
+            display: inline;
+            color: white;
+        }
+
+        footer > section:not(:first-child) {
+            margin: 0;
+        }
+}
+
+@media screen and (min-width:740px) and (max-width:921px) {
+    footer > section:not(:first-child) {
+        margin-left: 30px;
+    }
 }

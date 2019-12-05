@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - Tindyr - TEST</title>
 
     <link rel="stylesheet" href="~/css/header.css">
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/layout.css" />
     <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Finger+Paint|Lato|Montserrat|Open+Sans|Work+Sans:400,700&display=swap">
@@ -56,16 +56,42 @@
 
         </nav>
     </header>
-    <div class="container">
+
+    <section class="content">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
+    </section>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - CQRSMED - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer>
+        <section>
+            <h3>Tindyr</h3>
+            <p>A small and fun description of Tindyr, because I am running out of content here</p>
+            <p class="copyright"><i class="fas fa-copyright"></i> 2019 Tindyr, All Rights Reserved.</p>
+        </section>
+
+        <section>
+            <h4>Product</h4>
+            <ul>
+                <li><a href="#">Catalogue</a></li>
+                <li><a href="#">Buy Premium</a></li>
+                <li><a href="#">Donate</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h4>Contact</h4>
+            <ul>
+                <li>customer-support@tindyr.dk</li>
+                <li>+4 8 15 16 23 42</li>
+                <li>
+                    <i class="fab fa-facebook"></i> <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i> <i class="fab fa-linkedin-in"></i>
+                </li>
+            </ul>
+        </section>
+
+        <p class="copyright"><i class="fas fa-copyright"></i> 2019 Tindyr, All Rights Reserved.</p>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
