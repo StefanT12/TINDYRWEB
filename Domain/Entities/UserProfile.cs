@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities
@@ -12,6 +13,8 @@ namespace Domain.Entities
         public string PhoneNumber { get; set; }
         public int ProfileOf { get; set; } 
         public virtual User User { get; set; }
+        public ICollection<Friendship> Friends { get; set; }
+        public ICollection<Message> Messages { get; set; }
 
     }
 }
