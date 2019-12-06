@@ -27,7 +27,7 @@ namespace Application.Users.Queries.GetUserList
 
             ul.Users = await _context.Users
                 .ProjectTo<UserDetailsVM>(_mapper.ConfigurationProvider)
-                .ToListAsync(cancellationToken); ;
+                .ToListAsync(cancellationToken); 
 
             return ul;
         }

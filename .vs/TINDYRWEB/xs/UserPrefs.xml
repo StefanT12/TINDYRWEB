@@ -1,23 +1,21 @@
 ﻿<Properties StartupConfiguration="{43364C45-480A-4780-99D3-DAA7EF9D461E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Domain/Entities/Animal.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Application/Common/Mapping/LikeMapping.cs">
     <Files>
-      <File FileName="Domain/Entities/User.cs" Line="22" Column="39" />
-      <File FileName="Domain/Entities/Animal.cs" Line="8" Column="36" />
-      <File FileName="Application/Users/Commands/UpdateUserProfile/UpdateUserProfile.cs" />
-      <File FileName="Domain/Entities/UserProfile.cs" />
-      <File FileName="Domain/Entities/Picture.cs" />
-      <File FileName="Domain/Entities/Message.cs" />
-      <File FileName="ApplicationUser/Common/Results.cs" />
-      <File FileName="Application/Users/Queries/GetProfile/GetUserProfile.cs" />
-      <File FileName="Application/Users/Queries/GetProfile/GetUserProfileHandler.cs" />
-      <File FileName="Application/Users/Queries/GetProfile/UserProfileDetailsVM.cs" />
-      <File FileName="Application/Common/Behaviours/RequestLogger.cs" />
-      <File FileName="Application/Common/Behaviours/RequestPerformanceBehaviour.cs" />
+      <File FileName="Application/Users/Commands/CreateUser/CreateUserHandler.cs" Line="32" Column="14" />
+      <File FileName="Application/Users/Commands/CreateUser/CreateUserValidator.cs" />
       <File FileName="Application/Common/Interfaces/IDbContext.cs" />
-      <File FileName="Application/Notes.txt" />
-      <File FileName="Persistence/DesignTimeDbContextFactoryBase.cs" />
       <File FileName="Persistence/TindyrDbContext.cs" />
-      <File FileName="Persistence/DependencyInjection.cs" />
+      <File FileName="Domain/Entities/Friendship.cs" />
+      <File FileName="Domain/Entities/Item.cs" />
+      <File FileName="Application/Users/Commands/UserLikes/UserLikesHandler.cs" Line="9" Column="29" />
+      <File FileName="Application/Common/Behaviours/UserLikedEvent.cs" Line="17" Column="24" />
+      <File FileName="Application/Users/Commands/UserLikes/UserLikedEventHandler.cs" Line="13" Column="119" />
+      <File FileName="Application/Users/Queries/GetUser/GetUserHandler.cs" Line="1" Column="1" />
+      <File FileName="Application/Users/Queries/GetUser/UserDetailsVM.cs" Line="18" Column="71" />
+      <File FileName="Domain/Entities/User.cs" Line="1" Column="1" />
+      <File FileName="Application/Users/Queries/Notifications/NotificationsQuery.cs" Line="64" Column="13" />
+      <File FileName="Application/Common/Mapping/NotificationMapping.cs" Line="35" Column="1" />
+      <File FileName="Application/Common/Mapping/LikeMapping.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,20 +23,24 @@
           <Node name="TINDYRWEB" expanded="True">
             <Node name="Core" expanded="True">
               <Node name="Application" expanded="True">
-                <Node name="Common" expanded="True" />
-              </Node>
-              <Node name="Common" expanded="True" />
-              <Node name="Domain" expanded="True">
-                <Node name="Entities" expanded="True">
-                  <Node name="Animal.cs" selected="True" />
+                <Node name="Common" expanded="True">
+                  <Node name="Mapping" expanded="True">
+                    <Node name="LikeMapping.cs" selected="True" />
+                  </Node>
+                  <Node name="Models" expanded="True" />
                 </Node>
+                <Node name="Users" expanded="True">
+                  <Node name="Commands" expanded="True" />
+                  <Node name="Queries" expanded="True">
+                    <Node name="Notifications" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Domain" expanded="True">
+                <Node name="Common" expanded="True" />
               </Node>
             </Node>
             <Node name="Infrastructure" expanded="True">
-              <Node name="ApplicationUser" expanded="True">
-                <Node name="Common" expanded="True" />
-              </Node>
-              <Node name="Persistence" expanded="True" />
               <Node name="Tindyr" expanded="True" />
             </Node>
           </Node>

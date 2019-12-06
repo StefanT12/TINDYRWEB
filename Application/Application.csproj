@@ -19,4 +19,11 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Users\Commands\UserLikes\" />
+    <Folder Include="Users\Queries\Notifications\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Users\Commands\UserLikes\UserLikesHandler.cs" />
+  </ItemGroup>
 </Project>
