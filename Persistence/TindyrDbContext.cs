@@ -31,9 +31,8 @@ namespace Persistence
         }
         #endregion
         public DbSet<User> Users { get; set; }
-        public DbSet<Item> Items { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
-
+        public DbSet<Like> Likes { get; set; }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             foreach (var entry in ChangeTracker.Entries<AuditableEntity>())

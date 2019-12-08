@@ -9,9 +9,7 @@ namespace Application.Common.Interfaces
     {
         DbSet<User> Users { get; set; }
         DbSet<UserProfile> UserProfiles { get; set; }
-
-        DbSet<Item> Items { get; set; }
-
+        DbSet<Like> Likes { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }
