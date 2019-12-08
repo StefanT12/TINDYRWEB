@@ -1,0 +1,2 @@
+﻿The chat stores connections in-memory and supports multiple devices using it at the same time
+it must be handled in js independent of MVC in the html page (because its too intensive to do it through MVC)

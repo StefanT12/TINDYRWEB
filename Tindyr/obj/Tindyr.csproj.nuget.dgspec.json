@@ -4,6 +4,115 @@
     "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Tindyr\\Tindyr.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\AppChat\\AppChat.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\AppChat\\AppChat.csproj",
+        "projectName": "AppChat",
+        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\AppChat\\AppChat.csproj",
+        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\AppChat\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj"
+              },
+              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj"
+              },
+              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -421,6 +530,9 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
+              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\AppChat\\AppChat.csproj": {
+                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\AppChat\\AppChat.csproj"
+              },
               "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj": {
                 "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj"
               },
@@ -449,6 +561,10 @@
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

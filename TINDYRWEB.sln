@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tindyr", "Tindyr\Tindyr.csproj", "{43364C45-480A-4780-99D3-DAA7EF9D461E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppChat", "AppChat\AppChat.csproj", "{AC2FED89-B393-4C31-B62B-1C4A794378B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{43364C45-480A-4780-99D3-DAA7EF9D461E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43364C45-480A-4780-99D3-DAA7EF9D461E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43364C45-480A-4780-99D3-DAA7EF9D461E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC2FED89-B393-4C31-B62B-1C4A794378B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC2FED89-B393-4C31-B62B-1C4A794378B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC2FED89-B393-4C31-B62B-1C4A794378B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC2FED89-B393-4C31-B62B-1C4A794378B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{E7EC2F22-1DB0-4F51-B6C8-187C14D7937B} = {316D8C11-A516-466E-BE17-A5F8E2E4324D}
 		{EC048BB1-4BEC-4255-A967-A9ED7411494A} = {2825B503-14A7-4BFE-B783-E09394B7458F}
 		{43364C45-480A-4780-99D3-DAA7EF9D461E} = {316D8C11-A516-466E-BE17-A5F8E2E4324D}
+		{AC2FED89-B393-4C31-B62B-1C4A794378B4} = {316D8C11-A516-466E-BE17-A5F8E2E4324D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AEF2F2B6-480F-47A9-B028-7095E5D298B7}

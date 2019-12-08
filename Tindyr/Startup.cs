@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Application;
 using ApplicationUser;
+using Chat;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
@@ -56,6 +57,8 @@ namespace Tindyr
             // Register the Swagger services - curently not working - we use swagger to hide backend and expose only API calls to it so front end can do whatever it wants without affecting the backend
             //theoretically, with this, we may not even need MVC, but we will skip Swagger in future versions :)
             services.AddSwaggerDocument();
+            //add realtime app 
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -94,6 +97,7 @@ namespace Tindyr
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapHub<ChatHub>("/chatHub");//add chat
                 //endpoints.MapAreaControllerRoute(
                 //    name: "Auth",
                 //    areaName: "Auth",
