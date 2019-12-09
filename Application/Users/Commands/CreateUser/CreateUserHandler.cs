@@ -11,8 +11,8 @@ namespace Application.Users.Commands.CreateUser
 {//we specify the Handler which will handle our request (CreateUser)
     public class CreateUserHandler : IRequestHandler<CreateUser, Result>
     {
-        IDbContext _context;
-        public CreateUserHandler(IDbContext context)//we ask for dependency from mediatR, we dont care where it comes from, mediatR handles it
+        ITindyrDbContext _context;
+        public CreateUserHandler(ITindyrDbContext context)//we ask for dependency from mediatR, we dont care where it comes from, mediatR handles it
         {
             _context = context;
         }

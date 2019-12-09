@@ -5,7 +5,7 @@ using Domain.Entities;
 
 namespace Application.Common.Interfaces
 {
-    public interface IDbContext
+    public interface ITindyrDbContext 
     {
         DbSet<User> Users { get; set; }
         DbSet<UserProfile> UserProfiles { get; set; }

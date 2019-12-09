@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Persistence
 {
-    public class TindyrDbContext : DbContext, IDbContext
+    public class TindyrDbContext : DbContext, ITindyrDbContext
     {
         private readonly IAppUser _currentUserService;
         private readonly IDateTime _dateTime;

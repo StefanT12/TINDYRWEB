@@ -12,8 +12,8 @@ namespace Application.Users.Commands.LikeUser
 {
     public class LikeUserHandler : IRequestHandler<LikeUser, Result>
     {
-        IDbContext _context;
-        public LikeUserHandler(IDbContext context)
+        ITindyrDbContext _context;
+        public LikeUserHandler(ITindyrDbContext context)
         {
             _context = context;
         }

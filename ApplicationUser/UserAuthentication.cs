@@ -13,8 +13,8 @@ namespace ApplicationUser
     public class UserAuthentication : IUserAuthentication
     {
         private IHttpContextAccessor _httpContextAccessor;
-        private IDbContext _dbContext;
-        public UserAuthentication(IHttpContextAccessor httpContextAccessor, IDbContext dbContext)
+        private ITindyrDbContext _dbContext;
+        public UserAuthentication(IHttpContextAccessor httpContextAccessor, ITindyrDbContext dbContext)
         {
             _httpContextAccessor = httpContextAccessor;
             _dbContext = dbContext;

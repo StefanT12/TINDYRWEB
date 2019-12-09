@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using AppChat;
 using Application;
 using ApplicationUser;
 using Chat;
@@ -16,6 +17,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Persistence;
+using Microsoft.AspNetCore.SignalR;
+
 
 namespace Tindyr
 {
@@ -59,6 +62,8 @@ namespace Tindyr
             services.AddSwaggerDocument();
             //add realtime app 
             services.AddSignalR();
+            //add chat
+            services.AddAppChat(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -97,13 +102,14 @@ namespace Tindyr
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapHub<ChatHub>("/chatHub");//add chat
+                endpoints.MapHub<AppChat.AppChat>("/appchat");//add chat
                 //endpoints.MapAreaControllerRoute(
                 //    name: "Auth",
                 //    areaName: "Auth",
                 //    pattern: "Auth/{controller=Auth}/{action=LogIn}/{id?}"
                 //    );
             });
+
 
         }
     }

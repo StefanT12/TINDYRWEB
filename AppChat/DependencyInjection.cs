@@ -2,17 +2,20 @@
 using Microsoft.Extensions.Configuration;
 using Application.Common.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
+using AppChat;
 
-namespace Persistence
+namespace AppChat
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddAppChat(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<TindyrDbContext>(options =>
+            services.AddDbContext<ChatDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("LocalAppDb")));
 
-            services.AddScoped<ITindyrDbContext>(provider => provider.GetService<TindyrDbContext>());
+            services.AddScoped(provider => provider.GetService<ChatDbContext>());
+
+            services.AddScoped<IAppChat, AppChat>();
 
             return services;
         }

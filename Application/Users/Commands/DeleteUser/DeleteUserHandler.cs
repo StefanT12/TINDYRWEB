@@ -9,9 +9,9 @@ namespace Application.Users.Commands.DeleteUser
 {
     public class DeleteUserHandler : IRequestHandler<DeleteUser>
     {
-        IDbContext _context;
+        ITindyrDbContext _context;
 
-        public DeleteUserHandler(IDbContext context)
+        public DeleteUserHandler(ITindyrDbContext context)
         {
             _context = context;
         }

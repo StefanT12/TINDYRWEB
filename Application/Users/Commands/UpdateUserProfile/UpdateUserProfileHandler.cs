@@ -9,8 +9,8 @@ namespace Application.Users.Commands.UpdateProfile
 {
     public class UpdateUserProfileHandler : IRequestHandler<UpdateUserProfile>
     {
-        IDbContext _context;
-        public UpdateUserProfileHandler(IDbContext context)
+        ITindyrDbContext _context;
+        public UpdateUserProfileHandler(ITindyrDbContext context)
         {
             _context = context;
         }

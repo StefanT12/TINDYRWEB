@@ -9,8 +9,8 @@ namespace Application.Users.Commands.UpdateUser
 {
     public class UpdateUserHandler : IRequestHandler<UpdateUser>
     {
-        IDbContext _context;
-        public UpdateUserHandler(IDbContext context)
+        ITindyrDbContext _context;
+        public UpdateUserHandler(ITindyrDbContext context)
         {
             _context = context;
         }
