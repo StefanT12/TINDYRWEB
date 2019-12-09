@@ -7,15 +7,15 @@
       <File FileName="Persistence/TindyrDbContext.cs" />
       <File FileName="Domain/Entities/Friendship.cs" />
       <File FileName="Domain/Entities/Item.cs" />
-      <File FileName="Application/Users/Commands/UserLikes/UserLikesHandler.cs" Line="9" Column="29" />
-      <File FileName="Application/Common/Behaviours/UserLikedEvent.cs" Line="17" Column="24" />
-      <File FileName="Application/Users/Commands/UserLikes/UserLikedEventHandler.cs" Line="13" Column="119" />
-      <File FileName="Application/Users/Queries/GetUser/GetUserHandler.cs" Line="1" Column="1" />
-      <File FileName="Application/Users/Queries/GetUser/UserDetailsVM.cs" Line="18" Column="71" />
-      <File FileName="Domain/Entities/User.cs" Line="1" Column="1" />
-      <File FileName="Application/Users/Queries/Notifications/NotificationsQuery.cs" Line="64" Column="13" />
-      <File FileName="Application/Common/Mapping/NotificationMapping.cs" Line="35" Column="1" />
-      <File FileName="Application/Common/Mapping/LikeMapping.cs" Line="1" Column="1" />
+      <File FileName="Application/Users/Commands/UserLikes/UserLikesHandler.cs" />
+      <File FileName="Application/Common/Behaviours/UserLikedEvent.cs" />
+      <File FileName="Application/Users/Commands/UserLikes/UserLikedEventHandler.cs" />
+      <File FileName="Application/Users/Queries/GetUser/GetUserHandler.cs" />
+      <File FileName="Application/Users/Queries/GetUser/UserDetailsVM.cs" />
+      <File FileName="Domain/Entities/User.cs" />
+      <File FileName="Application/Users/Queries/Notifications/NotificationsQuery.cs" />
+      <File FileName="Application/Common/Mapping/NotificationMapping.cs" />
+      <File FileName="Application/Common/Mapping/LikeMapping.cs" Line="18" Column="43" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
