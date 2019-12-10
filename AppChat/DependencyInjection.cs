@@ -20,7 +20,7 @@ namespace AppChat
                     //})
                 ));
 
-            //services.AddScoped(provider => provider.GetService<ChatDbContext>());
+            services.AddScoped<IChatDbContext>(provider => provider.GetService<ChatDbContext>()); 
 
             services.AddScoped<IAppChat, AppChat>();
 

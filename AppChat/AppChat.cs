@@ -13,25 +13,27 @@ namespace AppChat
     [Authorize]
     public class AppChat : Hub, IAppChat
     {
-        private int _messageCount;
-        private readonly ChatDbContext _chatDb;
-        public AppChat(ChatDbContext chatDb)
+        private static int _messageCount;
+        private readonly IChatDbContext _chatDb;
+        public AppChat(IChatDbContext chatDb)
         {
             _chatDb = chatDb;
         }
 
-        private readonly static ConnectionMapping<string> _connections =
-            new ConnectionMapping<string>();
+        private readonly static ConnectionMapping _connections =
+            new ConnectionMapping();
 
         public void SendMessage(string receiver, string sender, string message)
         {
-            foreach (var connectionId in _connections.GetConnections(receiver))//display at calling end
+            var receiverConnections = _connections.GetConnections(receiver);
+            foreach (var connectionId in receiverConnections)//display at calling end
             {
                 if(!connectionId.Equals(""))
                     Clients.Client(connectionId).SendAsync("MessageReceived", sender, message);
             }
 
-            foreach(var connectionId in _connections.GetConnections(sender))//display at receiving end
+            var senderConnections = _connections.GetConnections(sender);
+            foreach (var connectionId in senderConnections)//display at receiving end
             {
                 if (!connectionId.Equals(""))
                     Clients.Client(connectionId).SendAsync("MessageSent", message);
@@ -43,7 +45,8 @@ namespace AppChat
             //save in db
             if(_messageCount > ChatSettings.MessagesTillDbSave)
             {
-                _chatDb.SaveChangesAsync();
+                //_chatDb.UpdateDbContext();
+                _chatDb.SaveConversations();
                 _messageCount = 0;
             }
         }
@@ -74,13 +77,13 @@ namespace AppChat
 
         public string GetConversation(string user1, string user2)
         {
-            var conversations = _chatDb.GetConversation(user1, user2);
+            var conversations = _chatDb.GetConversation(string.GetHashCode(user1)+string.GetHashCode(user2));
             return ConversationToJson.GetJson(conversations);
         }
 
-        public async void DeleteConversation(int conversationID)
+        public void DeleteConversation(int conversationID)
         {
-            var conversation = await _chatDb.Conversations.FindAsync(conversationID);
+            var conversation = _chatDb.Conversations.Find(conversationID);
 
             if(conversation == null)
             {
@@ -90,7 +93,7 @@ namespace AppChat
 
             _chatDb.Remove(conversation);
 
-            await _chatDb.SaveChangesAsync();
+            _chatDb.SaveContextChanges();
         }
     }
 }

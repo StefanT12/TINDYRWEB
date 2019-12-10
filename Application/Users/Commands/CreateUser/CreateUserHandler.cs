@@ -30,7 +30,7 @@ namespace Application.Users.Commands.CreateUser
             //if the user doesn't exist, we continue to creating the user
             var user = new User
             {
-                UserID = _context.Users.Count(),
+                //UserID = _context.Users.Count(),
                 Username = request.UserName,
                 Password = request.UserPass,
                 Role = request.Role
