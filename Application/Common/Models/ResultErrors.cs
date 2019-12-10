@@ -6,6 +6,8 @@ namespace Application.Common.Models
 {
     public static class ResultErrors
     {
-        public static readonly string UsernameExists = "This username already exists.";
+        public static readonly int UsernameExists = string.GetHashCode("Username exists");
+        public static readonly int LikedAlready = string.GetHashCode("Liked already");
+        public static readonly int UnlikedAlready = string.GetHashCode("Unliked already");
     }
 }

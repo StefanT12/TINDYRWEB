@@ -12,10 +12,10 @@ namespace Application.Users.Queries.GetProfile
 {
     public class GetUserProfileHandler : IRequestHandler<GetUserProfile, UserProfileDetailsVM>
     {
-        private readonly IDbContext _dbContext;
+        private readonly ITindyrDbContext _dbContext;
         private readonly IMapper _mapper;
 
-        public GetUserProfileHandler(IDbContext dbContext, IMapper mapper)
+        public GetUserProfileHandler(ITindyrDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;

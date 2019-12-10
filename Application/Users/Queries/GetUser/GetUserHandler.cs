@@ -13,9 +13,9 @@ namespace Application.Users.Queries.GetUser
 {
     public class GetUserHandler : IRequestHandler<GetUser, UserDetailsVM>
     {
-        private readonly IDbContext _dbContext;
+        private readonly ITindyrDbContext _dbContext;
         private readonly IMapper _mapper;
-        public GetUserHandler(IDbContext dbContext, IMapper mapper)
+        public GetUserHandler(ITindyrDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;

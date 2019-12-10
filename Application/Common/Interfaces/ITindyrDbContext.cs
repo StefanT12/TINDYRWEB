@@ -5,13 +5,11 @@ using Domain.Entities;
 
 namespace Application.Common.Interfaces
 {
-    public interface IDbContext
+    public interface ITindyrDbContext 
     {
         DbSet<User> Users { get; set; }
         DbSet<UserProfile> UserProfiles { get; set; }
-
-        DbSet<Item> Items { get; set; }
-
+        DbSet<Match> Matches { get; set; } 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Persistence
 {
-    public class TindyrDbContext : DbContext, IDbContext
+    public class TindyrDbContext : DbContext, ITindyrDbContext
     {
         private readonly IAppUser _currentUserService;
         private readonly IDateTime _dateTime;
@@ -31,9 +31,8 @@ namespace Persistence
         }
         #endregion
         public DbSet<User> Users { get; set; }
-        public DbSet<Item> Items { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
-
+        public DbSet<Match> Matches { get; set; }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             foreach (var entry in ChangeTracker.Entries<AuditableEntity>())

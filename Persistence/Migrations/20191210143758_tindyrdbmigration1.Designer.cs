@@ -9,8 +9,8 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(TindyrDbContext))]
-    [Migration("20191113193155_Initial")]
-    partial class Initial
+    [Migration("20191210143758_tindyrdbmigration1")]
+    partial class tindyrdbmigration1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,28 +20,25 @@ namespace Persistence.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Domain.Entities.Item", b =>
+            modelBuilder.Entity("Domain.Entities.Match", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("MatchId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Description")
+                    b.Property<string>("User1")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageURL")
+                    b.Property<string>("User2")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("User2LikedBack")
+                        .HasColumnType("bit");
 
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
+                    b.HasKey("MatchId");
 
-                    b.HasKey("ID");
-
-                    b.ToTable("Items");
+                    b.ToTable("Matches");
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>

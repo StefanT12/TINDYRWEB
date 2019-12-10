@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using AppChat;
 using Application;
 using ApplicationUser;
 using MediatR;
@@ -15,6 +16,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Persistence;
+using Microsoft.AspNetCore.SignalR;
+
 
 namespace Tindyr
 {
@@ -56,6 +59,10 @@ namespace Tindyr
             // Register the Swagger services - curently not working - we use swagger to hide backend and expose only API calls to it so front end can do whatever it wants without affecting the backend
             //theoretically, with this, we may not even need MVC, but we will skip Swagger in future versions :)
             services.AddSwaggerDocument();
+            //add realtime app 
+            services.AddSignalR();
+            //add chat
+            services.AddAppChat(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -94,12 +101,14 @@ namespace Tindyr
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapHub<AppChat.AppChat>("/appchat");//add chat
                 //endpoints.MapAreaControllerRoute(
                 //    name: "Auth",
                 //    areaName: "Auth",
                 //    pattern: "Auth/{controller=Auth}/{action=LogIn}/{id?}"
                 //    );
             });
+
 
         }
     }
