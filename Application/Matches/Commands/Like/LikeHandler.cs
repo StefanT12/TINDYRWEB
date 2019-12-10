@@ -27,7 +27,7 @@ namespace Application.Matches.Commands
             if(match != null)
             {
                 match.User2LikedBack = true;
-                return Result.Success();
+                return Result.Success(ResultSuccessMessage.UsersMatched);
             }
 
             //second, pathetic, return
@@ -36,7 +36,7 @@ namespace Application.Matches.Commands
 
             if(match != null)
             {
-                return Result.Failure("Liked already");
+                return Result.Failure(ResultErrors.LikedAlready);
             }
 
             //third, create match and lets see
@@ -45,7 +45,7 @@ namespace Application.Matches.Commands
 
             _dbContext.Matches.Add(match);
 
-            return Result.Success();
+            return Result.Success(ResultSuccessMessage.Liked);
         }
     }
 }

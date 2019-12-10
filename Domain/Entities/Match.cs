@@ -19,10 +19,14 @@ namespace Domain.Entities
             return false;
         }
 
+        public bool InteractionExists(string aUser, string anotherUser)
+        {
+            return (User1 == aUser && User2 == anotherUser) || (User1 == anotherUser && User2 == aUser);
+        }
+
         public bool UsersMatch(string aUser, string anotherUser)
         {
-            var interactionExists = (User1 == aUser && User2 == anotherUser) || (User1 == anotherUser && User2 == aUser);
-            return interactionExists && User2LikedBack;
+            return InteractionExists(aUser, anotherUser) && User2LikedBack;
         }
     }
 }
