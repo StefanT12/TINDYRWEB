@@ -32,7 +32,7 @@ namespace Tindyr.Controllers
                 return ViewRedirect.BackHome;
             }
 
-            TempData[TempDataVar.Msg] = logged.Error;
+            TempData[TempDataVar.Msg] = logged.ResultMessage;
 
             return View();
         }
@@ -60,7 +60,7 @@ namespace Tindyr.Controllers
 
             if (registered.Succeeded == false)
             {
-                TempData[TempDataVar.Msg] = registered.Error;//this is a 'database' error
+                TempData[TempDataVar.Msg] = registered.ResultMessage;//this is a 'database' error
                 return View();
             }
 

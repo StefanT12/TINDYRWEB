@@ -9,8 +9,8 @@ namespace AppChat.Configurations
     {
         public void Configure(EntityTypeBuilder<Conversation> builder)
         {
-            builder.HasKey(e => e.Id)
-                .HasName("Id");
+            builder.HasKey(e => e.ConversationId)
+                .HasName("ConversationId");
              
 
             builder.HasMany(m => m.Messages)

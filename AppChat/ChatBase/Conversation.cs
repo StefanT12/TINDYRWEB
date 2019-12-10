@@ -7,7 +7,7 @@ namespace AppChat.Base
 {
     public class Conversation
     {
-        public int Id { get; set; }
+        public int ConversationId { get; set; }
         public string User1Name { get; set; }
         public string User2Name { get; set; }
 

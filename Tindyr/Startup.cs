@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using AppChat;
 using Application;
 using ApplicationUser;
-using Chat;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;

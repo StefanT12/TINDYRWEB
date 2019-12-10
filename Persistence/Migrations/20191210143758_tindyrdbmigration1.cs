@@ -2,24 +2,23 @@
 
 namespace Persistence.Migrations
 {
-    public partial class Initial : Migration
+    public partial class tindyrdbmigration1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Items",
+                name: "Matches",
                 columns: table => new
                 {
-                    ID = table.Column<int>(nullable: false)
+                    MatchId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
-                    ImageURL = table.Column<string>(nullable: true),
-                    Price = table.Column<double>(nullable: false)
+                    User2LikedBack = table.Column<bool>(nullable: false),
+                    User1 = table.Column<string>(nullable: true),
+                    User2 = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Items", x => x.ID);
+                    table.PrimaryKey("PK_Matches", x => x.MatchId);
                 });
 
             migrationBuilder.CreateTable(
@@ -70,7 +69,7 @@ namespace Persistence.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Items");
+                name: "Matches");
 
             migrationBuilder.DropTable(
                 name: "UserProfiles");

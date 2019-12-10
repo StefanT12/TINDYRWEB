@@ -14,7 +14,7 @@ namespace AppChat.ToJson
         public string ToUser { get; set; }
         public MessageVM(Message message)
         {
-            Id = message.Id;
+            Id = message.MessageId;
             Content = message.Content;
             Timestamp = message.Timestamp;
             FromUser = message.FromUser;
