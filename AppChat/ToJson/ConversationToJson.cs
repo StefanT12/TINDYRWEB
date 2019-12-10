@@ -17,7 +17,7 @@ namespace AppChat.ToJson
         public static string GetJson(Conversation con)
         {
             var cvm = new ConversationToJson();
-            cvm.Id = con.Id;
+            cvm.Id = con.ConversationId;
             cvm.User1Name = con.User1Name;
             cvm.User2Name = con.User2Name;
             //we ask for count only once

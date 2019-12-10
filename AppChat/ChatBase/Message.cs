@@ -7,7 +7,7 @@ namespace AppChat.Base
 {
     public class Message
     {
-        public int Id { get; set; }
+        public int MessageId { get; set; }
 
         public string Content { get; set; }
 
