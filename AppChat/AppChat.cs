@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace AppChat
 {
     [Authorize]
-    public class AppChat : Hub, IAppChat
+    public class AppChat : Hub
     {
         private int _messageCount;
         private readonly ChatDbContext _chatDb;
