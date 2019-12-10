@@ -12,3 +12,6 @@ C:\Users\Intel\source\repos\TINDYRWEB\AppChat\obj\Debug\netcoreapp3.0\AppChat.cs
 C:\Users\Intel\source\repos\TINDYRWEB\AppChat\obj\Debug\netcoreapp3.0\AppChat.AssemblyInfoInputs.cache
 C:\Users\Intel\source\repos\TINDYRWEB\AppChat\obj\Debug\netcoreapp3.0\AppChat.AssemblyInfo.cs
 C:\Users\Intel\source\repos\TINDYRWEB\AppChat\obj\Debug\netcoreapp3.0\AppChat.csproj.CopyComplete
+C:\Users\Intel\source\repos\TINDYRWEB\AppChat\bin\Debug\netcoreapp3.0\AppChat.pdb
+C:\Users\Intel\source\repos\TINDYRWEB\AppChat\obj\Debug\netcoreapp3.0\AppChat.dll
+C:\Users\Intel\source\repos\TINDYRWEB\AppChat\obj\Debug\netcoreapp3.0\AppChat.pdb

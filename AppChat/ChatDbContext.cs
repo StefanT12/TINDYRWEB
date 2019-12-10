@@ -53,11 +53,13 @@ namespace AppChat
             return conversation;
         }
 
-        public List<Conversation> GetConversations(string username)
+        public Conversation GetConversation(string user1, string user2)
         {
-            var cons = new List<Conversation>();
-            cons.AddRange(Conversations.Where(c => c.User1Name == username || c.User2Name == username));
-            return cons;
+            var con = new Conversation();
+            con = Conversations.SingleOrDefault(c =>
+           (c.User1Name == user1 && c.User2Name == user2) ||
+           (c.User1Name == user2 && c.User2Name == user1));
+            return con;
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

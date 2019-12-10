@@ -72,10 +72,10 @@ namespace AppChat
         }
         #endregion
 
-        public string GetConversation(string username)
+        public string GetConversation(string user1, string user2)
         {
-            var conversations = _chatDb.GetConversations(username);
-            return ConversationsToJson.GetJson(conversations);
+            var conversations = _chatDb.GetConversation(user1, user2);
+            return ConversationToJson.GetJson(conversations);
         }
 
         public async void DeleteConversation(int conversationID)
