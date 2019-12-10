@@ -1,10 +1,4 @@
-﻿The chat stores connections in-memory and supports multiple devices using it at the same time
-It also stores all messages and conversations in db for later retrieval 
-Getting the conversation, Receiving and sending must all be handled in js (as shown below)
-
-JS usage: 
-
-//get connection
+﻿//get connection
 var connection = new signalR.HubConnectionBuilder().withUrl("/appchat").build();
 
 //use this to retrieve conversations - they are sorted already by message timestamp

@@ -39,7 +39,9 @@ namespace AppChat
                 };
                 conversation.Messages.Add(newMessage);//add our new message
                 Conversations.Add(conversation);
+                await SaveChangesAsync();//the first conversation must be saved -all messages refer to it and its id-
                 return;
+
             }
             //add to conversation
             conversation.Messages.Add(newMessage);
