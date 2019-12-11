@@ -12,5 +12,10 @@ namespace Tindyr.Controllers
         {
             return View();
         }
+
+        public IActionResult ChatMessageBox()
+        {
+            return View();
+        }
     }
 }

@@ -77,10 +77,6 @@
               "target": "Package",
               "version": "[3.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
-              "target": "Package",
-              "version": "[2.0.3, )"
-            },
             "Microsoft.Extensions.Configuration.EnvironmentVariables": {
               "target": "Package",
               "version": "[3.0.0, )"

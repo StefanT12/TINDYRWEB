@@ -318,3 +318,4 @@ C:\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.Views.pdb
 C:\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.csproj.CopyComplete
 C:\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.dll
 C:\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.pdb
+C:\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Chat\ChatMessageBox.cshtml.g.cs

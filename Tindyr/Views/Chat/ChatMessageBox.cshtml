@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewData["Title"] = "ChatMessageBox";
+}
+   //chat zone
+    <div id="chat_zone">
+        //open and close chat burger. have some kind of notification if you have messages
+        <div id="mySidebar" class="sidebar width0px">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img id="secondaryMessangerButton" class="messangerIcon" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Messenger_colored_svg-512.png" alt="Messanger" /></a>
+            <a href="#"><img class="messangerIcon" src="https://img.favpng.com/11/4/14/computer-icons-user-symbol-light-png-favpng-SpjCsM9Bzipc7zF1JQG3gKjt9.jpg" alt="User2" /> User2</a>
+            <a href="#">User3</a>
+            <a href="#">User4</a>
+            <a href="#">User5</a>
+        </div>
+        
+        <div id="main">
+            <button class="openbtn" onclick="openNav()"><img id="mainMessangerButton" class="messangerIcon" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Messenger_colored_svg-512.png" alt="Messanger" /></button>
+        </div>
+
+        //list of users, reverse dropdown
+        //for 1 to 6 show
+        <div id="chat-users">
+            //show name and picture
+            // show new messages
+            // open message box
+        </div>
+        // end for 1 to 6
+    </div>
+
+<script>
+function openNav() {
+document.getElementById("mySidebar").classList.add('width200px');
+document.getElementById("mySidebar").classList.remove('width0px');
+document.getElementById("main").classList.add('d-none');
+  document.getElementById("secondaryMessangerButton").style.display = "block";
+  document.getElementById("mainMessangerButton").classList.add('d-none');
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+document.getElementById("mySidebar").classList.add('width0px');
+document.getElementById("mySidebar").classList.remove('width200px');
+document.getElementById("main").classList.remove('d-none');
+  document.getElementById("secondaryMessangerButton").style.display = "none";
+  document.getElementById("mainMessangerButton").classList.remove('d-none');
+}
+</script>
+<style>
+    button img{
+    }
+.messangerIcon{      
+    width: 45px;
+    height: 45px;
+}
+
+.sidebar {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  right: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+.width200px{
+    width: 200px;
+}
+.width0px{
+    width: 0px;
+}
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  width:0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.openbtn:hover {
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    right: 0;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+</style>
