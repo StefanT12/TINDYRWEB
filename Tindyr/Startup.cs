@@ -17,7 +17,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Persistence;
 using Microsoft.AspNetCore.SignalR;
-
+using Matching;
 
 namespace Tindyr
 {
@@ -63,6 +63,7 @@ namespace Tindyr
             services.AddSignalR();
             //add chat
             services.AddAppChat(Configuration);
+            services.AddLiveMatch();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -101,7 +102,8 @@ namespace Tindyr
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapHub<Chat.AppChat>("/appchat");//add chat
+                endpoints.MapHub<AppChat>("/appchat");//add chat
+                endpoints.MapHub<LiveMatch>("/livematch");//add live match
                 //endpoints.MapAreaControllerRoute(
                 //    name: "Auth",
                 //    areaName: "Auth",

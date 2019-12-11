@@ -36,6 +36,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ApplicationUser\ApplicationUser.csproj" />
     <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Matching\Matching.csproj" />
     <ProjectReference Include="..\Persistence\Persistence.csproj" />
     <ProjectReference Include="..\AppChat\AppChat.csproj" />
   </ItemGroup>
