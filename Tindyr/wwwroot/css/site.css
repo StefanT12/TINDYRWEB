@@ -148,3 +148,46 @@ span {
         margin-top: 0;
     }
 }
+
+/*** DONATE PAGE ***/
+
+.donate {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 100px 45px 0 45px;
+}
+
+    .donate > img {
+        width: 100%;
+        height: auto;
+    }
+
+.donate-p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #000000;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .grid-row-one {
+        grid-row: 1;
+    }
+
+    .donate {
+        grid-template-columns: 1fr;
+        margin-top: 0px;
+    }
+
+    .donate-p {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 739px) {
+    .donate {
+        margin: 0 15px 0 15px;
+    }
+}
