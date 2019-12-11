@@ -11,12 +11,9 @@ namespace AppChat
 {
     public interface IChatDbContext
     {
-        DbSet<Conversation> Conversations { get; set; }
         void AddMessage(string message, string sender, string receiver);
-        Conversation GetConversation(int conversationKey);
-        void SaveContextChanges();
-        void UpdateDbContext();
-        void Remove(Conversation conversation);
+        Conversation GetConversation(string user1, string user2);
+        void RemoveConversation(Conversation conversation);
         void SaveConversations();
     }
-}
+} 
