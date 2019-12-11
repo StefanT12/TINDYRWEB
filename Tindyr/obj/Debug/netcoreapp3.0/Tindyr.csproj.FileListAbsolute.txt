@@ -318,3 +318,4 @@ C:/Users/Intel/source/repos/TINDYRWEB/Tindyr/obj/Debug/netcoreapp3.0/Razor/Views
 /Users/deni/Documents/Tindyr/TINDYRWEB/Tindyr/obj/Debug/netcoreapp3.0/Tindyr.csproj.CopyComplete
 /Users/deni/Documents/Tindyr/TINDYRWEB/Tindyr/obj/Debug/netcoreapp3.0/Tindyr.dll
 /Users/deni/Documents/Tindyr/TINDYRWEB/Tindyr/obj/Debug/netcoreapp3.0/Tindyr.pdb
+/Users/deni/Documents/Tindyr/TINDYRWEB/Tindyr/obj/Debug/netcoreapp3.0/Razor/Views/Browse/Browsing.cshtml.g.cs
