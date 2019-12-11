@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Common.Connection;
 
 namespace Chat
 {

@@ -10,6 +10,6 @@ namespace Application.Common.Interfaces
     {
         Task<Result> Login(string username, string password);
         Task<Result> Logout();
-       
+        
     }
 }

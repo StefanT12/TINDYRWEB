@@ -7,6 +7,7 @@ using Application.Common.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using ApplicationUser.Common;
+using Microsoft.AspNetCore.SignalR;
 
 namespace ApplicationUser
 {

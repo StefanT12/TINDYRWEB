@@ -13,11 +13,6 @@ namespace Chat
         {
             services.AddDbContext<ChatDbContext>(options =>
                     options.UseSqlServer(configuration.GetConnectionString("LocalAppDb")
-                    //,
-                    //sqlServerOptions =>
-                    //{
-                    //    sqlServerOptions.MigrationsAssembly(typeof(ChatDbContext).GetTypeInfo().Assembly.FullName);
-                    //})
                 )); 
 
             services.AddScoped<IChatDbContext>(provider => provider.GetService<ChatDbContext>()); 
