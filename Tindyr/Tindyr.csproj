@@ -40,4 +40,7 @@
     <ProjectReference Include="..\AppChat\AppChat.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="Views\Shared\_CookieConsentPartial.cshtml" />
+  </ItemGroup>
 </Project>

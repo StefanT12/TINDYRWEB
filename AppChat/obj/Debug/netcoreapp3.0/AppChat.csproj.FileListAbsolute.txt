@@ -21,3 +21,17 @@ C:/Users/Intel/source/repos/TINDYRWEB/AppChat/obj/Debug/netcoreapp3.0/AppChat.pd
 /Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/obj/Debug/netcoreapp3.0/AppChat.csprojAssemblyReference.cache
 /Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/obj/Debug/netcoreapp3.0/AppChat.AssemblyInfoInputs.cache
 /Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/obj/Debug/netcoreapp3.0/AppChat.AssemblyInfo.cs
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/bin/Debug/netcoreapp3.0/AppChat.deps.json
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/bin/Debug/netcoreapp3.0/AppChat.runtimeconfig.json
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/bin/Debug/netcoreapp3.0/AppChat.runtimeconfig.dev.json
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/bin/Debug/netcoreapp3.0/AppChat.dll
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/bin/Debug/netcoreapp3.0/AppChat.pdb
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/bin/Debug/netcoreapp3.0/Application.dll
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/bin/Debug/netcoreapp3.0/Common.dll
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/bin/Debug/netcoreapp3.0/Domain.dll
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/bin/Debug/netcoreapp3.0/Application.pdb
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/bin/Debug/netcoreapp3.0/Common.pdb
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/bin/Debug/netcoreapp3.0/Domain.pdb
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/obj/Debug/netcoreapp3.0/AppChat.csproj.CopyComplete
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/obj/Debug/netcoreapp3.0/AppChat.dll
+/Users/deni/Documents/Tindyr/TINDYRWEB/AppChat/obj/Debug/netcoreapp3.0/AppChat.pdb

@@ -1,0 +1,10 @@
+﻿using System;
+namespace Tindyr.wwwroot.css
+{
+ public class catalogue
+ {
+     public catalogue()
+     {
+     }
+ }
+}
