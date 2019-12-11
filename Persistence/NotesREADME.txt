@@ -1,0 +1,2 @@
+﻿Persistence implements EF Core with the interface provided by Application.
+The beauty  of this is that the database can be implemented with any DB system without affecting our business layer. In our case its EF with SQL

@@ -1,43 +1,122 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj": {}
+    "/Users/deni/Documents/Tindyr/TINDYRWEB/ApplicationUser/ApplicationUser.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj": {
+    "/Users/deni/Documents/Tindyr/TINDYRWEB/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj",
-        "projectName": "ApplicationUser",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\ApplicationUser.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\ApplicationUser\\obj\\",
+        "projectUniqueName": "/Users/deni/Documents/Tindyr/TINDYRWEB/Application/Application.csproj",
+        "projectName": "Application",
+        "projectPath": "/Users/deni/Documents/Tindyr/TINDYRWEB/Application/Application.csproj",
+        "packagesPath": "/Users/deni/.nuget/packages/",
+        "outputPath": "/Users/deni/Documents/Tindyr/TINDYRWEB/Application/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/deni/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj"
+              "/Users/deni/Documents/Tindyr/TINDYRWEB/Domain/Domain.csproj": {
+                "projectPath": "/Users/deni/Documents/Tindyr/TINDYRWEB/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.5.0-preview5, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/deni/Documents/Tindyr/TINDYRWEB/ApplicationUser/ApplicationUser.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/deni/Documents/Tindyr/TINDYRWEB/ApplicationUser/ApplicationUser.csproj",
+        "projectName": "ApplicationUser",
+        "projectPath": "/Users/deni/Documents/Tindyr/TINDYRWEB/ApplicationUser/ApplicationUser.csproj",
+        "packagesPath": "/Users/deni/.nuget/packages/",
+        "outputPath": "/Users/deni/Documents/Tindyr/TINDYRWEB/ApplicationUser/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/deni/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "/Users/deni/Documents/Tindyr/TINDYRWEB/Application/Application.csproj": {
+                "projectPath": "/Users/deni/Documents/Tindyr/TINDYRWEB/Application/Application.csproj"
               },
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj"
+              "/Users/deni/Documents/Tindyr/TINDYRWEB/Common/Common.csproj": {
+                "projectPath": "/Users/deni/Documents/Tindyr/TINDYRWEB/Common/Common.csproj"
               },
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj"
+              "/Users/deni/Documents/Tindyr/TINDYRWEB/Domain/Domain.csproj": {
+                "projectPath": "/Users/deni/Documents/Tindyr/TINDYRWEB/Domain/Domain.csproj"
               }
             }
           }
@@ -105,120 +184,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj": {
+    "/Users/deni/Documents/Tindyr/TINDYRWEB/Common/Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj",
-        "projectName": "Application",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Application\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.0": {
-            "projectReferences": {
-              "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.0": {
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "FluentValidation": {
-              "target": "Package",
-              "version": "[8.5.0-preview5, )"
-            },
-            "MediatR": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "MediatR.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
-            "Microsoft.Extensions.Logging.Abstractions": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj",
+        "projectUniqueName": "/Users/deni/Documents/Tindyr/TINDYRWEB/Common/Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\obj\\",
+        "projectPath": "/Users/deni/Documents/Tindyr/TINDYRWEB/Common/Common.csproj",
+        "packagesPath": "/Users/deni/.nuget/packages/",
+        "outputPath": "/Users/deni/Documents/Tindyr/TINDYRWEB/Common/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/deni/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -249,31 +234,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj": {
+    "/Users/deni/Documents/Tindyr/TINDYRWEB/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj",
+        "projectUniqueName": "/Users/deni/Documents/Tindyr/TINDYRWEB/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Domain\\obj\\",
+        "projectPath": "/Users/deni/Documents/Tindyr/TINDYRWEB/Domain/Domain.csproj",
+        "packagesPath": "/Users/deni/.nuget/packages/",
+        "outputPath": "/Users/deni/Documents/Tindyr/TINDYRWEB/Domain/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/deni/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -304,7 +284,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

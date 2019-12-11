@@ -4,10 +4,10 @@ using System.Linq;
 
 namespace AppChat.Base
 {
-    public class ConnectionMapping<T>
+    public class ConnectionMapping
     {
-        private readonly Dictionary<T, HashSet<string>> _connections =
-            new Dictionary<T, HashSet<string>>();
+        private readonly Dictionary<string, HashSet<string>> _connections =
+            new Dictionary<string, HashSet<string>>();
 
         public int Count
         {
@@ -17,7 +17,7 @@ namespace AppChat.Base
             }
         }
 
-        public void Add(T key, string connectionId)
+        public void Add(string key, string connectionId)
         {
             lock (_connections)
             {
@@ -35,7 +35,7 @@ namespace AppChat.Base
             }
         }
 
-        public IEnumerable<string> GetConnections(T key)
+        public IEnumerable<string> GetConnections(string key)
         {
             HashSet<string> connections;
             if (_connections.TryGetValue(key, out connections))
@@ -46,7 +46,7 @@ namespace AppChat.Base
             return Enumerable.Empty<string>();
         }
 
-        public void Remove(T key, string connectionId)
+        public void Remove(string key, string connectionId)
         {
             lock (_connections)
             {
