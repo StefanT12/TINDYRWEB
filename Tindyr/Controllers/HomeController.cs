@@ -25,7 +25,7 @@ namespace Tindyr.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Premium()
         {
             return View();
         }

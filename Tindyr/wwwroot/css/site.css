@@ -25,7 +25,7 @@ a {
 }
 
 /* Sticky footer styles
--------------------------------------------------- */
+-------------------------------------------------- 
 html {
   font-size: 14px;
 }
@@ -52,14 +52,14 @@ button.accept-policy {
 }
 
 /* Sticky footer styles
--------------------------------------------------- */
+--------------------------------------------------
 html {
   position: relative;
   min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
+  /* Margin bottom by footer height 
   margin-bottom: 60px;
 }
 .footer {
@@ -67,5 +67,84 @@ body {
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 60px; }/* Vertically center the text there */
+
+
+
+/*** GET PREMIUM PAGE ***/
+
+.premium {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+    .premium > img {
+        width: 100%;
+        height: auto;
+    }
+
+/* Text */
+.premium-headline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    margin-bottom: 0;
+}
+
+.premium-p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #534F4F;
+}
+
+.premium-ul {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #000000;
+}
+
+.fa-ul {
+    margin-left: 30px !important;
+}
+
+.premium-ul > li {
+    padding-bottom: 20px;
+}
+
+span {
+    color: #F15D68;
+}
+
+/* Button */
+.premium-button {
+    width: 394px;
+    height: 71px;
+    background-color: #F15D68;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+    .premium-button:hover {
+        cursor: pointer;
+        box-shadow: 0px 15px 20px rgba(241, 93, 104, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+    }
+
+@media screen and (max-width: 820px) {
+    .premium {
+        grid-template-columns: auto;
+    }
+
+        .premium > div {
+            margin: 0 20px 0 15px;
+        }
+
+    .premium-p {
+        margin-top: 0;
+    }
 }

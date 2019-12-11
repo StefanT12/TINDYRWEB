@@ -133,7 +133,6 @@ nav {
 /* We are setting the min-height, so the footer can always appear at the bottom of the screen */
 .content {
     min-height: 85%;
-    margin: 0 auto -50px;
 }
 
 /*** Footer ***/
