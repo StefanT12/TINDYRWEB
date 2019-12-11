@@ -13,9 +13,9 @@ namespace AppChat.Configurations
                 .HasName("ConversationId");
              
 
-            builder.HasMany(m => m.Messages)
-                .WithOne(c => c.Conversation)
-                .IsRequired();
+            //builder.HasMany(m => m.Messages)
+            //    .WithOne(c => c.Conversation)
+            //    .IsRequired();
         }
     }
 }

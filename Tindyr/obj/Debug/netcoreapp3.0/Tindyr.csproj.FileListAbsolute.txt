@@ -157,3 +157,4 @@ C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.MvcA
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\System.Net.WebSockets.WebSocketProtocol.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\AppChat.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\AppChat.pdb
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Chat\ChatTest.cshtml.g.cs
