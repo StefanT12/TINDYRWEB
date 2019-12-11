@@ -2,10 +2,10 @@
 using Microsoft.Extensions.Configuration;
 using Application.Common.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
-using AppChat;
+using Chat;
 using System.Reflection;
 
-namespace AppChat
+namespace Chat
 {
     public static class DependencyInjection
     {
@@ -22,7 +22,7 @@ namespace AppChat
 
             services.AddScoped<IChatDbContext>(provider => provider.GetService<ChatDbContext>()); 
 
-            services.AddScoped<IAppChat, AppChat>();
+            services.AddScoped<Application.Common.Interfaces.IAppChat, Chat.AppChat>();
 
             return services;
         }

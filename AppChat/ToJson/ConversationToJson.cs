@@ -1,4 +1,4 @@
-﻿using AppChat.Base;
+﻿using Chat.Base;
 using Application.Common.Mapping;
 using AutoMapper;
 using Newtonsoft.Json;
@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AppChat.ToJson
+namespace Chat.ToJson
 {
     public class ConversationToJson
     {

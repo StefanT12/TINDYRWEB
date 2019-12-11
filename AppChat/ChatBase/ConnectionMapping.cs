@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AppChat.Base
+namespace Chat.Base
 {
     public class ConnectionMapping
     {

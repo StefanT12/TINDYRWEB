@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AppChat
+namespace Chat
 {
     public static class ChatSettings
     {

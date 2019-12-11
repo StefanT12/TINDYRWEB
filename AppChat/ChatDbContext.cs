@@ -5,11 +5,11 @@ using System.Text;
 
 using Application.Common.Interfaces;
 using Domain.Entities;
-using AppChat.Base;
+using Chat.Base;
 using System.Threading.Tasks;
 using System.Linq;
 
-namespace AppChat
+namespace Chat
 {
     public class ChatDbContext : DbContext, IChatDbContext
     {

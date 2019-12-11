@@ -1,9 +1,9 @@
-﻿using AppChat.Base;
+﻿using Chat.Base;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AppChat.ToJson
+namespace Chat.ToJson
 {
     public class MessageVM
     {

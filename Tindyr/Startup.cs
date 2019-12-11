@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using AppChat;
+using Chat;
 using Application;
 using ApplicationUser;
 using MediatR;
@@ -101,7 +101,7 @@ namespace Tindyr
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapHub<AppChat.AppChat>("/appchat");//add chat
+                endpoints.MapHub<Chat.AppChat>("/appchat");//add chat
                 //endpoints.MapAreaControllerRoute(
                 //    name: "Auth",
                 //    areaName: "Auth",

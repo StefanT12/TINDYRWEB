@@ -3,11 +3,11 @@ using Microsoft.Extensions.Configuration;
 using Application.Common.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using AppChat.Base;
+using Chat.Base;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace AppChat
+namespace Chat
 {
     public interface IChatDbContext
     {

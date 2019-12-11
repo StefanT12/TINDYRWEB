@@ -1,5 +1,5 @@
-﻿using AppChat.Base;
-using AppChat.ToJson;
+﻿using Chat.Base;
+using Chat.ToJson;
 using Application.Common.Interfaces;
 using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
@@ -8,7 +8,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AppChat
+namespace Chat
 {
     [Authorize]
     public class AppChat : Hub, IAppChat

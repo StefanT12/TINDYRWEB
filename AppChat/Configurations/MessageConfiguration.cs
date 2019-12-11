@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Domain.Entities;
-using AppChat.Base;
+using Chat.Base;
 
-namespace AppChat.Configurations
+namespace Chat.Configurations
 {
     public class MessageConfiguration : IEntityTypeConfiguration<Message>
     {

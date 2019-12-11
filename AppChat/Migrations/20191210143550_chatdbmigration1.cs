@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace AppChat.Migrations
+namespace Chat.Migrations
 {
     public partial class chatdbmigration1 : Migration
     {

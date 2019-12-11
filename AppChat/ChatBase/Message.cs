@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AppChat.Base 
+namespace Chat.Base 
 {
     public class Message
     {
