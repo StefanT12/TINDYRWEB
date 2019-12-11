@@ -18,7 +18,7 @@ namespace Chat
                     //{
                     //    sqlServerOptions.MigrationsAssembly(typeof(ChatDbContext).GetTypeInfo().Assembly.FullName);
                     //})
-                ));
+                )); 
 
             services.AddScoped<IChatDbContext>(provider => provider.GetService<ChatDbContext>()); 
 
