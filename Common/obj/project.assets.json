@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Intel\\.nuget\\packages\\": {},
+    "C:\\Users\\Ace\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj",
+      "projectUniqueName": "C:\\TINDYRWEB\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj",
-      "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\obj\\",
+      "projectPath": "C:\\TINDYRWEB\\Common\\Common.csproj",
+      "packagesPath": "C:\\Users\\Ace\\.nuget\\packages\\",
+      "outputPath": "C:\\TINDYRWEB\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ace\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

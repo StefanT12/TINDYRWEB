@@ -18,7 +18,7 @@ namespace Chat.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("AppChat.Base.Conversation", b =>
+            modelBuilder.Entity("Chat.Base.Conversation", b =>
                 {
                     b.Property<int>("ConversationId")
                         .ValueGeneratedOnAdd()
@@ -37,7 +37,7 @@ namespace Chat.Migrations
                     b.ToTable("Conversations");
                 });
 
-            modelBuilder.Entity("AppChat.Base.Message", b =>
+            modelBuilder.Entity("Chat.Base.Message", b =>
                 {
                     b.Property<int>("MessageId")
                         .ValueGeneratedOnAdd()
@@ -67,9 +67,9 @@ namespace Chat.Migrations
                     b.ToTable("Message");
                 });
 
-            modelBuilder.Entity("AppChat.Base.Message", b =>
+            modelBuilder.Entity("Chat.Base.Message", b =>
                 {
-                    b.HasOne("AppChat.Base.Conversation", "Conversation")
+                    b.HasOne("Chat.Base.Conversation", "Conversation")
                         .WithMany("Messages")
                         .HasForeignKey("ConversationId")
                         .OnDelete(DeleteBehavior.Cascade)

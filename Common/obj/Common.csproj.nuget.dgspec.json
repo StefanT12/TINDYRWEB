@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj": {}
+    "C:\\TINDYRWEB\\Common\\Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj": {
+    "C:\\TINDYRWEB\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\TINDYRWEB\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\Intel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intel\\source\\repos\\TINDYRWEB\\Common\\obj\\",
+        "projectPath": "C:\\TINDYRWEB\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\Ace\\.nuget\\packages\\",
+        "outputPath": "C:\\TINDYRWEB\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Intel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ace\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools.DotNet": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

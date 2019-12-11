@@ -20,3 +20,14 @@ C:\Users\Intel\source\repos\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Applic
 C:\Users\Intel\source\repos\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.csproj.CopyComplete
 C:\Users\Intel\source\repos\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.pdb
+C:\TINDYRWEB\Application\bin\Debug\netcoreapp3.0\Application.deps.json
+C:\TINDYRWEB\Application\bin\Debug\netcoreapp3.0\Application.dll
+C:\TINDYRWEB\Application\bin\Debug\netcoreapp3.0\Application.pdb
+C:\TINDYRWEB\Application\bin\Debug\netcoreapp3.0\Domain.dll
+C:\TINDYRWEB\Application\bin\Debug\netcoreapp3.0\Domain.pdb
+C:\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.csprojAssemblyReference.cache
+C:\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.AssemblyInfoInputs.cache
+C:\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.AssemblyInfo.cs
+C:\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.csproj.CopyComplete
+C:\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.dll
+C:\TINDYRWEB\Application\obj\Debug\netcoreapp3.0\Application.pdb
