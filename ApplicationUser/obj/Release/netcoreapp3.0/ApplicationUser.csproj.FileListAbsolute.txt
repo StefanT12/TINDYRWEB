@@ -1,0 +1,17 @@
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\bin\Release\netcoreapp3.0\ApplicationUser.deps.json
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\bin\Release\netcoreapp3.0\ApplicationUser.runtimeconfig.json
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\bin\Release\netcoreapp3.0\ApplicationUser.runtimeconfig.dev.json
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\bin\Release\netcoreapp3.0\ApplicationUser.dll
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\bin\Release\netcoreapp3.0\ApplicationUser.pdb
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\bin\Release\netcoreapp3.0\Application.dll
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\bin\Release\netcoreapp3.0\Common.dll
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\bin\Release\netcoreapp3.0\Domain.dll
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\bin\Release\netcoreapp3.0\Application.pdb
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\bin\Release\netcoreapp3.0\Common.pdb
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\bin\Release\netcoreapp3.0\Domain.pdb
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\obj\Release\netcoreapp3.0\ApplicationUser.csprojAssemblyReference.cache
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\obj\Release\netcoreapp3.0\ApplicationUser.AssemblyInfoInputs.cache
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\obj\Release\netcoreapp3.0\ApplicationUser.AssemblyInfo.cs
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\obj\Release\netcoreapp3.0\ApplicationUser.csproj.CopyComplete
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\obj\Release\netcoreapp3.0\ApplicationUser.dll
+C:\Users\Intel\source\repos\TINDYRWEB\ApplicationUser\obj\Release\netcoreapp3.0\ApplicationUser.pdb

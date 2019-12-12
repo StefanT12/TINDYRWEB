@@ -41,6 +41,9 @@ namespace Persistence.Migrations
                     b.Property<string>("AnimalType")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("FrontPictureId")
+                        .HasColumnType("int");
+
                     b.Property<string>("LookingFor")
                         .HasColumnType("nvarchar(max)");
 
@@ -88,13 +91,19 @@ namespace Persistence.Migrations
                     b.Property<int>("AnimalId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("AnimalId1")
+                        .HasColumnType("int");
+
                     b.Property<string>("FileName")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id")
                         .HasName("Id");
 
-                    b.HasIndex("AnimalId");
+                    b.HasIndex("AnimalId")
+                        .IsUnique();
+
+                    b.HasIndex("AnimalId1");
 
                     b.ToTable("Picture");
                 });
@@ -165,10 +174,14 @@ namespace Persistence.Migrations
             modelBuilder.Entity("Domain.Entities.Picture", b =>
                 {
                     b.HasOne("Domain.Entities.Animal", "Animal")
-                        .WithMany("Pictures")
-                        .HasForeignKey("AnimalId")
+                        .WithOne("FrontPicture")
+                        .HasForeignKey("Domain.Entities.Picture", "AnimalId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Domain.Entities.Animal", null)
+                        .WithMany("Pictures")
+                        .HasForeignKey("AnimalId1");
                 });
 
             modelBuilder.Entity("Domain.Entities.UserProfile", b =>
