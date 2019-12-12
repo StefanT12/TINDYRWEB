@@ -1,0 +1,226 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Mini Navigation (icons) */
+.mini-nav {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30px auto;
+    margin: 0 45px 0 45px;
+}
+
+    .mini-nav > ul {
+        justify-self: end;
+    }
+
+    .mini-nav ul > li {
+        display: inline;
+    }
+
+        .mini-nav ul > li:not(:last-child) {
+            padding-right: 25px;
+        }
+
+    .mini-nav li > a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+.fa-caret-right {
+    color: #F15D68;
+}
+/*** MAIN NAVIGATION ***/
+nav {
+    margin: 0 45px 0 45px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+    /* LOGO */
+    nav > a {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        color: #F15D68;
+        text-decoration: none;
+    }
+
+    /* MENU ITEMS */
+    nav > ul {
+        justify-self: end;
+    }
+
+        nav > ul > li {
+            display: inline;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            justify-items: end;
+        }
+
+            nav > ul > li:not(:last-child) {
+                padding-right: 40px;
+            }
+
+            nav > ul > li > a {
+                text-decoration: none;
+                color: #000000;
+            }
+
+/* Making it responsive */
+
+.icon {
+    display: none;
+}
+
+/* When the screen is less than 739 pixels wide, hide all ul elements and instead show the icon */
+@media screen and (max-width: 739px) {
+    nav {
+        margin: 0 15px 0 15px;
+    }
+
+        nav ul {
+            display: none;
+        }
+
+        nav a.icon {
+            float: right;
+            display: grid;
+            color: #534F4F;
+            justify-items: end;
+        }
+
+    .mini-nav {
+        margin: 0 15px 0 15px;
+        padding-bottom: 15px;
+    }
+
+    nav.responsive {
+        position: relative;
+    }
+
+    .responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: scale(1.1);
+    }
+
+    nav.responsive ul {
+        display: grid;
+        margin-top: 45px;
+        text-align: right;
+    }
+
+        nav.responsive ul > li {
+            padding: 0 0 15px 0;
+        }
+}
+
+/*** Content ***/
+/* We are setting the min-height, so the footer can always appear at the bottom of the screen */
+.content {
+    min-height: 85%;
+}
+
+/*** Footer ***/
+footer {
+    background-color: #F15D68;
+    display: grid;
+    grid-template-columns: 2fr auto auto;
+    padding: 0 45px 0 45px;
+}
+
+    /* Description and Copyright */
+    footer > section > h3 {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        margin: 15px 0;
+    }
+
+    footer > section > p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: white;
+        max-width: 450px;
+    }
+
+.copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+}
+
+/* Product and Contact */
+footer > section > h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin: 15px 0;
+}
+
+section > ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+    section > ul > li {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        color: white;
+        padding-bottom: 5px;
+    }
+
+        section > ul > li > a {
+            text-decoration: none;
+            color: white;
+        }
+
+footer > section:not(:first-child) {
+    margin-left: 100px;
+}
+
+footer > p {
+    display: none;
+}
+
+/* Footer responsiveness */
+@media screen and (max-width: 739px) {
+    footer {
+        padding: 0 15px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+        footer > section:first-child {
+            display: none;
+        }
+
+        footer > p {
+            display: inline;
+            color: white;
+        }
+
+        footer > section:not(:first-child) {
+            margin: 0;
+        }
+}
+
+@media screen and (min-width:740px) and (max-width:921px) {
+    footer > section:not(:first-child) {
+        margin-left: 30px;
+    }
+}

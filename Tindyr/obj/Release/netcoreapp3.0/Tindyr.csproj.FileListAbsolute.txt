@@ -162,3 +162,5 @@ C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Tindyr.Vi
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Tindyr.csproj.CopyComplete
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Tindyr.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Tindyr.pdb
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\Home\Donate.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\Home\Premium.cshtml.g.cs

@@ -37,6 +37,13 @@ namespace Tindyr.Controllers
             return View();
         }
 
+        public async Task<IActionResult> LogOut()
+        {
+            var logged = await (_authentication.Logout());
+
+            return ViewRedirect.BackHome;
+        }
+
         public IActionResult Register()
         {
             return View();

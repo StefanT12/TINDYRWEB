@@ -1,57 +1,117 @@
-﻿<!DOCTYPE html>
+﻿
+@addTagHelper *,Microsoft.AspNetCore.MVC.TagHelpers
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Tindyr - TEST</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/layout.css" />
+    <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Finger+Paint|Lato|Montserrat|Open+Sans|Work+Sans:400,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css">
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CQRSMED</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="LogIn">Log In</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Chat" asp-action="ChatTest">Chat Test</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ProfileEdit" asp-action="ProfileEdit">ProfileEdit</a>
-                        </li>
-                    </ul>
-                </div>
+        <!-- Mini Navigation (Log in/Sign up), when the user is not logged-->
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <div class="mini-nav">
+                <ul>
+                    <li>
+                        <i class="fas fa-caret-right"></i>
+                        <a asp-area="" asp-controller="Auth" asp-action="LogIn">Log in</a>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-caret-right"></i>
+                        <a asp-area="" asp-controller="Auth" asp-action="Register">Sign Up</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        } 
+        else
+        {
+            <nav class="nav-container" id="nav">
+
+                <!-- Logo and Main navigation, when the user is logged -->
+
+                <a asp-area="" asp-controller="Home" asp-action="Index">Tindyr</a>
+                
+                <ul>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Premium">Get Premium</a>
+                    </li>
+
+                    <li>
+                        <a asp-area="" asp-controller="Auth" asp-action="LogOut">Log Out</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="ProfileEdit" asp-action="ProfileEdit">Profile</a>
+                    </li>
+                </ul>
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fas fa-bars"></i>
+                </a>
+
+            </nav>
+        }
+        
+
     </header>
-    <div class="container">
+
+    <section class="content">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
+    </section>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - CQRSMED - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer>
+        <section>
+            <h3>Tindyr</h3>
+            <p>A small and fun description of Tindyr, because I am running out of content here</p>
+            <p class="copyright"><i class="fas fa-copyright"></i> 2019 Tindyr, All Rights Reserved.</p>
+        </section>
+
+        <section>
+            <h4>Product</h4>
+            <ul>
+                <li><a href="#">Catalogue</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Premium">Get Premium</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Donate">Donate</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h4>Contact</h4>
+            <ul>
+                <li>customer-support@tindyr.dk</li>
+                <li>+4 8 15 16 23 42</li>
+                <li>
+                    <i class="fab fa-facebook"></i> <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i> <i class="fab fa-linkedin-in"></i>
+                </li>
+            </ul>
+        </section>
+
+        <p class="copyright"><i class="fas fa-copyright"></i> 2019 Tindyr, All Rights Reserved.</p>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @RenderSection("Scripts", required: false)
+
 </body>
 </html>
