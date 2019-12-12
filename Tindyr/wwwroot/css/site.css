@@ -263,7 +263,7 @@ span {
     color: #534F4F;
 }
 
-.login-form input[type=text]:focus + i.fa, .login-form input[type=password]:focus + i.fa {
+.login-form input[type=text]:focus ~ i.fa, .login-form input[type=password]:focus ~ i.fa {
     color: #F15D68;
     opacity: 1;
 }
@@ -289,6 +289,7 @@ span {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    left: 10px;
 }
 
     /* Hide the browser's default checkbox */
@@ -304,6 +305,8 @@ span {
         font-family: 'Montserrat', sans-serif;
         font-size: 14px;
         color: #F15D68;
+        margin: 0px;
+        line-height: 25px;
     }
 
 /* Create a custom checkbox */
@@ -354,5 +357,5 @@ span {
 }
 
 .login label {
-    display:none;
+    cursor: pointer;
 }

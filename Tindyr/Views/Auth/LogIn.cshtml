@@ -12,22 +12,23 @@
             <div asp-validation-summary="ModelOnly"></div>
             <fieldset>
                 <section>
-                    <label asp-for="Username"></label>
                     <input type="text" asp-for="Username" placeholder="Username">
                     <i class="fa fa-fw fa-user"></i>
                     <span asp-validation-for="Username"></span>
                 </section>
 
                 <section>
-                    <label asp-for="Password"></label>
                     <input type="password" asp-for="Password" placeholder="Password">
                     <i class="fa fa-fw fa-lock"></i>
                     <span asp-validation-for="Password"></span>
                 </section>
 
                 <section class="checkbox-container">
-                    <input type="checkbox" name="remember-me" value="logged-in" checked="checked"><p>Keep me logged in</p>
-                    <span class="checkmark"></span>
+                    <label>
+                        <input type="checkbox" name="remember-me" value="logged-in" checked="checked">
+                        <p>Keep me logged in</p>
+                        <span class="checkmark"></span>
+                    </label>
                 </section>
 
                 <button type="button" class="premium-button">Let's go!</button>
