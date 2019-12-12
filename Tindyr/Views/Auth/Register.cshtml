@@ -5,41 +5,45 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Register</h1>
 
-<div class="row">
+<article class="login">
+    <h1>Sign up</h1>
+    <p>Join the fun community of Tindyr</p>
+    <form class="login-form" autocomplete="off" asp-action="Register" method="post">
+        <div asp-validation-summary="ModelOnly"></div>
 
-    <div class="col-md-4">
-        <form asp-action="Register" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <fieldset>
+            <section>
+                <label asp-for="Username"></label>
+                <input asp-for="Username" type="text" placeholder="Username">
+                <span asp-validation-for="Username"></span>
+                <i class="fa fa-fw fa-envelope-open"></i>
+            </section>
 
-            <div class="form-group">
-                <label asp-for="Username" class="control-label"></label>
-                <input asp-for="Username" class="form-control hide" />
-                <span asp-validation-for="Username" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ConfirmUsername" class="control-label"></label>
-                <input asp-for="ConfirmUsername" class="form-control hide" />
-                <span asp-validation-for="ConfirmUsername" class="text-danger"></span>
-            </div>
+            <section>
+                <label asp-for="ConfirmUsername"></label>
+                <input asp-for="ConfirmUsername" type="text" placeholder="Confirm Username" autocomplete="off">
+                <span asp-validation-for="ConfirmUsername"></span>
+                <i class="fa fa-fw fa-envelope"></i>
+            </section>
 
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input type="password" asp-for="Password" class="form-control" />
+            <section>
+                <label asp-for="Password"></label>
+                <input asp-for="Password" type="password" placeholder="Password">
                 <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ConfirmPassword" class="control-label"></label>
-                <input type="password" asp-for="ConfirmPassword" class="form-control" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-            </div>
+                <i class="fa fa-fw fa-unlock"></i>
+            </section>
 
-            <div class="form-group">
-                <input type="submit" value="Let's go!" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+            <section>
+                <label asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" type="password" placeholder="Confirm Password">
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                <i class="fa fa-fw fa-lock"></i>
+            </section>
+
+            <button type="button" class="premium-button">Let's go!</button>
+        </fieldset>
+    </form>
+</article>
 
 <p class="text-info">@TempData[Tindyr.Extensions.TempDataVar.Msg]</p>

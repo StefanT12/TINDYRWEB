@@ -352,3 +352,7 @@ span {
     color: #F15D68;
     text-align: center;
 }
+
+.login label {
+    display:none;
+}

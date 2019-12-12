@@ -12,14 +12,14 @@
             <div asp-validation-summary="ModelOnly"></div>
             <fieldset>
                 <section>
-                    <label for="Username"></label>
+                    <label asp-for="Username"></label>
                     <input type="text" asp-for="Username" placeholder="Username">
                     <i class="fa fa-fw fa-user"></i>
                     <span asp-validation-for="Username"></span>
                 </section>
 
                 <section>
-                    <label for="Password"></label>
+                    <label asp-for="Password"></label>
                     <input type="password" asp-for="Password" placeholder="Password">
                     <i class="fa fa-fw fa-lock"></i>
                     <span asp-validation-for="Password"></span>
