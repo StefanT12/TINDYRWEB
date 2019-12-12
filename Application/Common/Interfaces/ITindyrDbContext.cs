@@ -10,6 +10,7 @@ namespace Application.Common.Interfaces
         DbSet<User> Users { get; set; }
         DbSet<UserProfile> UserProfiles { get; set; }
         DbSet<Match> Matches { get; set; } 
+        DbSet<Animal> Animals { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }

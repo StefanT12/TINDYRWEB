@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.Users.Queries.GetUserList
+namespace Application.Users.Queries
 {
     public class UserListVM 
     {

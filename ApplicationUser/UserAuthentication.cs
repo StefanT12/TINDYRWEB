@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using ApplicationUser.Common;
 using Microsoft.AspNetCore.SignalR;
+using System.Linq;
 
 namespace ApplicationUser
 {
@@ -57,6 +58,21 @@ namespace ApplicationUser
             await AuthenticationHttpContextExtensions.SignOutAsync(context, CookieAuthenticationDefaults.AuthenticationScheme);
 
             return Result.Success();
+        }
+
+        public int UserId(ClaimsPrincipal user)
+        {
+            var userid = -1;//no user/anoymous - soon to be user 
+            var isAuthenticated = user.Identity.IsAuthenticated;
+
+            if (isAuthenticated)
+            {
+
+                var claims = user.Claims;
+                var uid = (claims.FirstOrDefault(c => c.Type == CustomClaims.UserID)).Value;
+                int.TryParse(uid, out userid);
+            }
+            return userid;
         }
     }
 }

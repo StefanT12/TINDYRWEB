@@ -158,3 +158,6 @@ C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\System.Net.
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\AppChat.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\AppChat.pdb
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Chat\ChatTest.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Matching.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Matching.pdb
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\ProfileEdit\ProfileEdit.cshtml.g.cs

@@ -5,7 +5,7 @@ using Domain.Entities;
 
 namespace Persistence.Configurations
 {
-    class ProfileConfiguration : IEntityTypeConfiguration<UserProfile>
+    public class ProfileConfiguration : IEntityTypeConfiguration<UserProfile>
     {
         public void Configure(EntityTypeBuilder<UserProfile> builder)
         {

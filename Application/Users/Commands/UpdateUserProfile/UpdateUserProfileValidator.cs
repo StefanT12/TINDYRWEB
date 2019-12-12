@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Application.Users.Commands.UpdateProfile
+namespace Application.Users.Commands
 {
     public class UpdateUserProfileValidator: AbstractValidator<UpdateUserProfile>
     {

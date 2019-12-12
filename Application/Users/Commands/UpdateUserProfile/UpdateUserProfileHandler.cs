@@ -5,7 +5,7 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Application.Users.Commands.UpdateProfile
+namespace Application.Users.Commands
 {
     public class UpdateUserProfileHandler : IRequestHandler<UpdateUserProfile>
     {

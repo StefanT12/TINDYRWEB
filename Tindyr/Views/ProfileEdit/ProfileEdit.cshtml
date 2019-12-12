@@ -1,0 +1,64 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.MVC.TagHelpers
+@model Tindyr.Models.ProfileEdit.AllUserInformationModel
+@{
+    ViewData["Title"] = "ProfileEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ProfileEdit</h1>
+
+<div class="col-md-4">
+    <form asp-action="ProfileEdit" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="UserProfileModel.FirstName" class="control-label"></label>
+            <input asp-for="UserProfileModel.FirstName" class="form-control hide" />
+            <span asp-validation-for="UserProfileModel.FirstName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="UserProfileModel.LastName" class="control-label"></label>
+            <input asp-for="UserProfileModel.LastName" class="form-control" />
+            <span asp-validation-for="UserProfileModel.LastName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="UserProfileModel.PhoneNumber" class="control-label"></label>
+            <input asp-for="UserProfileModel.PhoneNumber" class="form-control" />
+            <span asp-validation-for="UserProfileModel.PhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="UserProfileModel.Email" class="control-label"></label>
+            <input asp-for="UserProfileModel.Email" class="form-control" />
+            <span asp-validation-for="UserProfileModel.Email" class="text-danger"></span>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label asp-for="AnimalModel.AnimalName" class="control-label"></label>
+            <input asp-for="AnimalModel.AnimalName" class="form-control" />
+            <span asp-validation-for="AnimalModel.AnimalName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="AnimalModel.AnimalType" class="control-label"></label>
+            <input asp-for="AnimalModel.AnimalType" class="form-control" />
+            <span asp-validation-for="AnimalModel.AnimalType" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="AnimalModel.AnimalGender" class="control-label"></label>
+            <input asp-for="AnimalModel.AnimalGender" class="form-control" />
+            <span asp-validation-for="AnimalModel.AnimalGender" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="AnimalModel.AnimalDateOfBirth" class="control-label"></label>
+            <input asp-for="AnimalModel.AnimalDateOfBirth" class="form-control" />
+            <span asp-validation-for="AnimalModel.AnimalDateOfBirth" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="AnimalModel.LookingFor" class="control-label"></label>
+            <input asp-for="AnimalModel.LookingFor" class="form-control" />
+            <span asp-validation-for="AnimalModel.LookingFor" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Let's go!" class="btn btn-primary" />
+        </div>
+    </form>
+</div>

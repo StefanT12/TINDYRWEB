@@ -11,23 +11,24 @@ using System.Threading.Tasks;
 
 namespace Application.Users.Queries
 {
-    public class GetWhoLikedThisUserHandler: IRequestHandler<GetWhoLikedThisUser, List<User>>
+    public class GetWhoLikedThisUserHandler: IRequestHandler<GetWhoLikedThisUser, UserListVM>
     {
         private readonly ITindyrDbContext _dbContext;
-        public GetWhoLikedThisUserHandler(ITindyrDbContext dbContext)
+        private readonly IMapper _mapper;
+        public GetWhoLikedThisUserHandler(ITindyrDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
         }
-        public async Task<List<User>> Handle(GetWhoLikedThisUser request, CancellationToken cancellationToken)
+        public async Task<UserListVM> Handle(GetWhoLikedThisUser request, CancellationToken cancellationToken)
         {
-            var users = new List<User>();
+            var users = new UserListVM();
 
             await foreach (var user in _dbContext.Users)
             {//user1 is the user we get from the for loop, user2 is the one from the request, we check to see if user 1 liked user 2
                 var match = await _dbContext.Matches.SingleOrDefaultAsync(m => m.User2LikedBack == false && m.User1.Equals(user.Username) && m.User2.Equals(request.User));
                 if (match != null)
                 {
-                    users.Add(user);
+                    users.Users.Add(_mapper.Map<UserDetailsVM>(user));
                 }
             }
 

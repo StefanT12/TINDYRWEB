@@ -1,7 +1,7 @@
 ﻿using Domain.Entities;
 using MediatR;
 
-namespace Application.Users.Commands.UpdateProfile
+namespace Application.Users.Commands
 {
     public class UpdateUserProfile : IRequest
     {

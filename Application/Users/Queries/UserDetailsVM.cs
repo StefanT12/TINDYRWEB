@@ -2,7 +2,7 @@
 using AutoMapper;
 using Domain.Entities;
 
-namespace Application.Users.Queries.GetUser 
+namespace Application.Users.Queries
 {
     public class UserDetailsVM : IMapFrom<User>
     {

@@ -41,6 +41,9 @@ namespace Application.Users.Commands.CreateUser
             var profile = new UserProfile { User = user };//the user will most likely need a profile, so we throw it there, since its a 1-o-1 relationship we pass the user and db context will sort it out
             _context.UserProfiles.Add(profile);//we add the profile
 
+            var animal = new Animal { User = user };
+            _context.Animals.Add(animal);
+
             await _context.SaveChangesAsync(cancellationToken);//we save the changes
 
             return Result.Success();//async task done

@@ -12,7 +12,7 @@ namespace Persistence
 {
     public class TindyrDbContext : DbContext, ITindyrDbContext
     {
-        private readonly IAppUser _currentUserService;
+        //private readonly IAppUser _currentUserService;
         private readonly IDateTime _dateTime;
         #region ctor
         public TindyrDbContext(DbContextOptions<TindyrDbContext> options)
@@ -26,13 +26,14 @@ namespace Persistence
             IDateTime dateTime)
             : base(options)
         {
-            _currentUserService = currentUserService;
+            //_currentUserService = currentUserService;
             _dateTime = dateTime;
         }
         #endregion
         public DbSet<User> Users { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<Match> Matches { get; set; }
+        public DbSet<Animal> Animals { get; set; }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
@@ -40,11 +41,11 @@ namespace Persistence
                 switch (entry.State)
                 {
                     case EntityState.Added:
-                        entry.Entity.CreatedBy = _currentUserService.UserID.ToString();
+                        //entry.Entity.CreatedBy = _currentUserService.UserID.ToString();
                         entry.Entity.Created = _dateTime.Now;
                         break;
                     case EntityState.Modified:
-                        entry.Entity.LastModifiedBy = _currentUserService.UserID.ToString();
+                        //entry.Entity.LastModifiedBy = _currentUserService.UserID.ToString();
                         entry.Entity.LastModified = _dateTime.Now;
                         break;
                 }

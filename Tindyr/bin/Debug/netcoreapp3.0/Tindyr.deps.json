@@ -27,6 +27,7 @@
           "AppChat": "1.0.0",
           "Application": "1.0.0",
           "ApplicationUser": "1.0.0",
+          "Matching": "1.0.0",
           "MediatR": "7.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "Microsoft.AspNetCore.SignalR": "1.1.0",
@@ -2663,6 +2664,7 @@
           "Microsoft.AspNetCore.Authentication": "2.2.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "2.2.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
+          "Microsoft.AspNetCore.SignalR": "1.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "3.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "3.0.0",
@@ -2690,6 +2692,27 @@
         },
         "compile": {
           "Domain.dll": {}
+        }
+      },
+      "Matching/1.0.0": {
+        "dependencies": {
+          "Application": "1.0.0",
+          "Common": "1.0.0",
+          "Domain": "1.0.0",
+          "Microsoft.AspNetCore.Authentication": "2.2.0",
+          "Microsoft.AspNetCore.Authentication.Cookies": "2.2.0",
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "Microsoft.AspNetCore.SignalR": "1.1.0",
+          "Microsoft.Extensions.Configuration.EnvironmentVariables": "3.0.0",
+          "Microsoft.Extensions.Configuration.FileExtensions": "3.0.0",
+          "Microsoft.Extensions.Configuration.Json": "3.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.0"
+        },
+        "runtime": {
+          "Matching.dll": {}
+        },
+        "compile": {
+          "Matching.dll": {}
         }
       },
       "Persistence/1.0.0": {
@@ -5962,6 +5985,11 @@
       "sha512": ""
     },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Matching/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
