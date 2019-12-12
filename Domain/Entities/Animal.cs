@@ -15,6 +15,8 @@ namespace Domain.Entities
         public DateTime AnimalDateOfBirth { get; set; }
         public virtual User User { get; set; }
         public int UserId { get; set; }
+        public virtual Picture FrontPicture { get; set; }
+        public int FrontPictureId { get; set; }
         public virtual ICollection<Picture> Pictures { get; set; }
     }
 }

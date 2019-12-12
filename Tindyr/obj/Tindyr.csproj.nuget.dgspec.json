@@ -660,6 +660,10 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "CoreCompat.System.Drawing": {
+              "target": "Package",
+              "version": "[1.0.0-beta006, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[7.0.0, )"

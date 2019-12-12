@@ -1,4 +1,5 @@
 ﻿using Application.Common.Mapping;
+using Application.Pictures.Queries;
 using AutoMapper;
 using Domain.Entities;
 using System;
@@ -16,7 +17,8 @@ namespace Application.Animals
         public string LookingFor { get; set; }
         public DateTime AnimalDateOfBirth { get; set; }
         public virtual User User { get; set; }
-        public virtual ICollection<Picture> Pictures { get; set; }
+        public virtual PictureVM FrontPicture { get; set; }
+        public virtual ICollection<PictureVM> Pictures { get; set; }
 
         public void Mapping(Profile profile)
         {
@@ -30,6 +32,7 @@ namespace Application.Animals
                 .ForMember(d => d.AnimalDateOfBirth, opt => opt.MapFrom(s => s.AnimalDateOfBirth))
                 .ForMember(d => d.User, opt => opt.MapFrom(s => s.User))
                 .ForMember(d => d.Pictures, opt => opt.MapFrom(s => s.Pictures));
+             
         }
 
     }

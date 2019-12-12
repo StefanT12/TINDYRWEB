@@ -11,42 +11,22 @@ using Application.Animals.Commands;
 using Application.Common.Interfaces;
 using System.Diagnostics;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.Extensions.FileProviders;
+using System.Drawing;
+using Tindyr.Extensions;
 
 namespace Tindyr.Controllers
 {
     public class ProfileEditController : BaseController
     {
-        [HttpPost("ProfileEditController")]
-        public async Task<IActionResult> FileUpload(List<IFormFile> files) 
-        {
-            long size = files.Sum(f => f.Length);
-
-            var filePaths = new List<string>();
-            foreach (var formFile in files)
-            {
-                if (formFile.Length > 0)
-                {
-                    // full path to file in temp location
-                    var filePath = "Images/";//Path.GetTempFileName(); //we are using Temp file name just for the example. Add your own file path.
-                    filePaths.Add(filePath);
-
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await formFile.CopyToAsync(stream);
-                    }
-                }
-            }
-
-            // process uploaded files
-            // Don't rely on or trust the FileName property without validation.
-
-            return Ok(new { count = files.Count, size, filePaths });
-        }
+       
 
         private readonly IUserAuthentication _authentication;
-        public ProfileEditController(IUserAuthentication authentication)
+        public ProfileEditController(IUserAuthentication authentication)//, IFileProvider fileProvider)
         {
             _authentication = authentication;
+           // _fileProvider = fileProvider;
         }
         public IActionResult ProfileEdit()
         {
@@ -55,7 +35,7 @@ namespace Tindyr.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ProfileEdit(AllUserInformationModel model)
+        public async Task<IActionResult> ProfileEdit([FromForm]AllUserInformationModel model)
         {
             var userId = _authentication.UserId(User);
 
@@ -68,6 +48,31 @@ namespace Tindyr.Controllers
                 PhoneNumber = model.UserProfileModel.PhoneNumber
             }));
 
+            //images
+            var newPicturesList = new List<string>();
+            var newFrontPict = "";
+
+            if(model.AnimalModel.CoverImage != null) 
+            {
+                bool upload = UploadOnServer(model.AnimalModel.CoverImage);
+                if (upload)
+                {
+                    newFrontPict = model.AnimalModel.CoverImage.FileName;
+                }
+            }
+
+            if (model.AnimalModel.Images != null)
+            {
+                foreach (var pict in model.AnimalModel.Images)
+                {
+                    bool upload = UploadOnServer(pict);
+                    if (upload)
+                    {
+                        newPicturesList.Add(pict.FileName);
+                    }
+                }
+            }
+
             var animalResult = await (Mediator.Send(new UpdateAnimal
             {
                 UserId = userId,
@@ -75,10 +80,24 @@ namespace Tindyr.Controllers
                 AnimalDateOfBirth = model.AnimalModel.AnimalDateOfBirth,
                 AnimalGender = model.AnimalModel.AnimalGender,
                 AnimalName = model.AnimalModel.AnimalName,
-                AnimalType = model.AnimalModel.AnimalType
+                AnimalType = model.AnimalModel.AnimalType,
+                PicturesName = newPicturesList,
+                FrontPicture = newFrontPict
             }));
 
             return View(model);
+
+        }
+
+        private bool UploadOnServer(IFormFile image)
+        {
+           
+            // Saving Image on Server
+            if (image.Length > 0)
+            {
+                return FileUpload.Upload(image);
+            }
+            return false;
         }
     }
 }

@@ -12,9 +12,10 @@ namespace Persistence.Configurations
             builder.HasKey(e => e.Id)
                 .HasName("Id");
 
-            builder.HasOne(a => a.Animal)
-               .WithMany(p => p.Pictures)
-               .HasForeignKey(fk => fk.AnimalId)
+            builder.HasOne(e => e.Animal)
+               .WithOne(a => a.FrontPicture)
+               .HasForeignKey<Picture>(a => a.AnimalId)
+               //.HasForeignKey<Animal>(a => a.FrontPictureId)
                .IsRequired();
         }
     }

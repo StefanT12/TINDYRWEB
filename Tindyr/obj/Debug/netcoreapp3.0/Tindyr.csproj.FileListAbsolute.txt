@@ -152,8 +152,6 @@ C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\zh-Hant\Mic
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Auth\LogIn.cshtml.g.cs
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Auth\Register.cshtml.g.cs
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\libman.json
-C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\System.Net.WebSockets.WebSocketProtocol.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\AppChat.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\AppChat.pdb
@@ -161,3 +159,6 @@ C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Matching.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Matching.pdb
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\ProfileEdit\ProfileEdit.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\CoreCompat.System.Drawing.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.MvcApplicationPartsAssemblyInfo.cache

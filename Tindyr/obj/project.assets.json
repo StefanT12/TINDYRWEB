@@ -28,6 +28,30 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "CoreCompat.System.Drawing/1.0.0-beta006": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Primitives": "4.0.1",
+          "System.Collections.NonGeneric": "4.0.1",
+          "System.Collections.Specialized": "4.0.1",
+          "System.ComponentModel.TypeConverter": "4.1.0",
+          "System.Drawing.Primitives": "4.0.0",
+          "System.IO.FileSystem": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0",
+          "System.Text.Encoding.Extensions": "4.0.11",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.3/CoreCompat.System.Drawing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/CoreCompat.System.Drawing.dll": {}
+        }
+      },
       "FluentValidation/8.5.0-preview5": {
         "type": "package",
         "dependencies": {
@@ -1933,7 +1957,7 @@
           "System.Threading": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Collections.Specialized.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Collections.Specialized.dll": {}
@@ -2180,6 +2204,19 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Diagnostics.Tracing.dll": {}
+        }
+      },
+      "System.Drawing.Primitives/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.1/System.Drawing.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/System.Drawing.Primitives.dll": {}
         }
       },
       "System.Dynamic.Runtime/4.0.11": {
@@ -3596,6 +3633,19 @@
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.pdb"
+      ]
+    },
+    "CoreCompat.System.Drawing/1.0.0-beta006": {
+      "sha512": "KOBeVy8FHx9zkXrIZAM8OdXPrimROmvfB02fOegrYIelNN/zWhsOwzONgD7gw7wOTJgAFfdwpme5CiMraJj47Q==",
+      "type": "package",
+      "path": "corecompat.system.drawing/1.0.0-beta006",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "corecompat.system.drawing.1.0.0-beta006.nupkg.sha512",
+        "corecompat.system.drawing.nuspec",
+        "lib/net45/CoreCompat.System.Drawing.dll",
+        "lib/netstandard1.3/CoreCompat.System.Drawing.dll"
       ]
     },
     "FluentValidation/8.5.0-preview5": {
@@ -6836,6 +6886,23 @@
         "ref/xamarinwatchos10/_._",
         "system.diagnostics.tracing.4.3.0.nupkg.sha512",
         "system.diagnostics.tracing.nuspec"
+      ]
+    },
+    "System.Drawing.Primitives/4.0.0": {
+      "sha512": "9lVRG1voBwzLGZkf1XFJrobdZDZ5ZHMU4FVTbXAbzehpN90yYgkUeo9GoEYdvkt/EXaaHZJAeuffXP4JBbY+Ig==",
+      "type": "package",
+      "path": "system.drawing.primitives/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/net45/System.Drawing.Primitives.dll",
+        "lib/netstandard1.1/System.Drawing.Primitives.dll",
+        "ref/net45/System.Drawing.Primitives.dll",
+        "ref/netstandard1.1/System.Drawing.Primitives.dll",
+        "system.drawing.primitives.4.0.0.nupkg.sha512",
+        "system.drawing.primitives.nuspec"
       ]
     },
     "System.Dynamic.Runtime/4.0.11": {
@@ -10304,6 +10371,7 @@
       "AppChat >= 1.0.0",
       "Application >= 1.0.0",
       "ApplicationUser >= 1.0.0",
+      "CoreCompat.System.Drawing >= 1.0.0-beta006",
       "Matching >= 1.0.0",
       "MediatR >= 7.0.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 7.0.0",
@@ -10378,6 +10446,10 @@
     "frameworks": {
       "netcoreapp3.0": {
         "dependencies": {
+          "CoreCompat.System.Drawing": {
+            "target": "Package",
+            "version": "[1.0.0-beta006, )"
+          },
           "MediatR": {
             "target": "Package",
             "version": "[7.0.0, )"

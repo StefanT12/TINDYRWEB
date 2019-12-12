@@ -28,7 +28,23 @@ namespace Application.Animals.Commands
                 animal.AnimalGender = request.AnimalGender;
                 animal.AnimalName = request.AnimalName;
                 animal.AnimalType = request.AnimalType;
-                animal.Pictures = request.Pictures;
+                
+                animal.Pictures = new HashSet<Picture>();
+
+                if (!request.FrontPicture.Equals(""))
+                {
+                    animal.FrontPicture = new Picture { FileName = request.FrontPicture, Animal = animal };
+                }
+                
+                if (request.PicturesName != null)
+                {
+                    foreach (var newPict in request.PicturesName)
+                    {
+                        animal.Pictures.Add(new Picture { Animal = animal, FileName = newPict });
+                    }
+                }
+                
+                
                 await _context.SaveChangesAsync(cancellationToken);
                 return Result.Success();
             }

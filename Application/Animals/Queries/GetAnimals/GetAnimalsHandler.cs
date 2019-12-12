@@ -1,5 +1,6 @@
 ﻿using Application.Common.Interfaces;
 using Application.Common.Models;
+using Application.Pictures.Queries;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Domain.Entities;
@@ -46,7 +47,18 @@ namespace Application.Animals.Queries
                 
                 if(animalFound != null)
                 {
-                    animFoundList.Animals.Add(_mapper.Map<GetAnimalVM>(animalFound));
+                    var animalVM = _mapper.Map<GetAnimalVM>(animalFound);
+                    
+                    animalVM.Pictures = new HashSet<PictureVM>();
+
+                    foreach (var pict in animalFound.Pictures)
+                    {
+                        animalVM.Pictures.Add(_mapper.Map<PictureVM>(pict));//convert all other pictures
+                    }
+
+                    animalVM.FrontPicture = _mapper.Map<PictureVM>(animalFound.FrontPicture);//convert front picture
+                    
+                    animFoundList.Animals.Add(animalVM);
                 }
             }
 

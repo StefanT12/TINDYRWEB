@@ -18,18 +18,20 @@ using Microsoft.Extensions.Hosting;
 using Persistence;
 using Microsoft.AspNetCore.SignalR;
 using Matching;
+using Microsoft.Extensions.FileProviders;
 
 namespace Tindyr
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment hostEnvironment)
         {
             Configuration = configuration;
+            HostEnvironment = hostEnvironment;
         }
 
         public IConfiguration Configuration { get; }
-
+        private readonly IWebHostEnvironment HostEnvironment;
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -64,6 +66,16 @@ namespace Tindyr
             //add chat
             services.AddAppChat(Configuration);
             services.AddLiveMatch();
+
+            //#region file provider setup
+            //var physicalProvider = HostEnvironment.ContentRootFileProvider;
+            //var manifestEmbeddedProvider =
+            //    new ManifestEmbeddedFileProvider(typeof(Program).Assembly);
+            //var compositeProvider =
+            //    new CompositeFileProvider(physicalProvider, manifestEmbeddedProvider);
+
+            //services.AddSingleton<IFileProvider>(compositeProvider);
+            //#endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
