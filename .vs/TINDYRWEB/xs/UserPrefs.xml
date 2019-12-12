@@ -1,16 +1,21 @@
 ﻿<Properties StartupConfiguration="{43364C45-480A-4780-99D3-DAA7EF9D461E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Tindyr/Views/Shared/_Layout.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tindyr/wwwroot/css/catalogueGrid.scss">
     <Files>
       <File FileName="AppChat/DependencyInjection.cs" Line="25" Column="14" />
-      <File FileName="AppChat/Migrations/20191210143550_chatdbmigration1.Designer.cs" Line="31" Column="57" />
-      <File FileName="Tindyr/Views/Home/Index.cshtml" Line="2" Column="11" />
-      <File FileName="Tindyr/Views/Shared/_Layout.cshtml" Line="22" Column="99" />
-      <File FileName="Tindyr/wwwroot/css/servicesGrid.css" Line="252" Column="2" />
-      <File FileName="Tindyr/Views/Browse/Browse.cshtml" Line="7" Column="1" />
-      <File FileName="Tindyr/wwwroot/css/catalogue.css" Line="887" Column="2" />
-      <File FileName="Tindyr/wwwroot/js/gridList.js" Line="22" Column="1" />
-      <File FileName="Tindyr/Views/Auth/LogIn.cshtml" Line="1" Column="1" />
-      <File FileName="Tindyr/Views/Chat/ChatTest.cshtml" Line="1" Column="1" />
+      <File FileName="AppChat/Migrations/20191210143550_chatdbmigration1.Designer.cs" />
+      <File FileName="Tindyr/Views/Home/Index.cshtml" />
+      <File FileName="Tindyr/Views/Shared/_Layout.cshtml" />
+      <File FileName="Tindyr/wwwroot/css/servicesGrid.css" />
+      <File FileName="Tindyr/wwwroot/css/catalogue.css" />
+      <File FileName="Tindyr/wwwroot/js/gridList.js" />
+      <File FileName="Tindyr/Views/Auth/LogIn.cshtml" />
+      <File FileName="Tindyr/Views/Chat/ChatTest.cshtml" />
+      <File FileName="Tindyr/Program.cs" />
+      <File FileName="Tindyr/Startup.cs" />
+      <File FileName="Tindyr/Views/_ViewImports.cshtml" />
+      <File FileName="Tindyr/wwwroot/css/catalogue.scss" />
+      <File FileName="Tindyr/Views/Browse/Browsing.cshtml" />
+      <File FileName="Tindyr/wwwroot/css/catalogueGrid.scss" Line="1070" Column="59" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,18 +29,15 @@
             <Node name="Infrastructure" expanded="True">
               <Node name="AppChat" expanded="True" />
               <Node name="Tindyr" expanded="True">
+                <Node name="Controllers" expanded="True" />
                 <Node name="Views" expanded="True">
-                  <Node name="Auth" expanded="True" />
-                  <Node name="Browse" expanded="True" />
-                  <Node name="Chat" expanded="True" />
-                  <Node name="Home" expanded="True" />
-                  <Node name="Shared" expanded="True">
-                    <Node name="_Layout.cshtml" selected="True" />
+                  <Node name="Browse" expanded="True">
+                    <Node name="Browsing.cshtml" selected="True" />
                   </Node>
+                  <Node name="Shared" expanded="True" />
                 </Node>
                 <Node name="wwwroot" expanded="True">
                   <Node name="css" expanded="True" />
-                  <Node name="js" expanded="True" />
                 </Node>
               </Node>
             </Node>

@@ -43,5 +43,8 @@
 
   <ItemGroup>
     <Content Remove="Views\Shared\_CookieConsentPartial.cshtml" />
+    <Content Remove="Views\Home\Browse.cshtml" />
+    <Content Remove="wwwroot\css\catalogue.scss" />
+    <Content Remove="wwwroot\css\catalogueGrid.scss" />
   </ItemGroup>
 </Project>

@@ -1,10 +1,13 @@
 ﻿using System;
+using Microsoft.AspNetCore.Mvc;
+
 namespace Tindyr.Controllers
 {
-    public class BrowseController
+    public class BrowseController : Controller
     {
-        public BrowseController()
+        public IActionResult Browsing()
         {
+            return View();
         }
     }
 }
