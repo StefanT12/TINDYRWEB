@@ -359,3 +359,43 @@ span {
 .login label {
     cursor: pointer;
 }
+
+.edit {
+    margin: 0 45px 0 45px;
+}
+
+.edit-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-gap: 1em;
+}
+
+.edit h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+}
+
+.edit h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+.edit-container article {
+    max-width: 380px;
+}
+
+.edit button {
+    margin-top: 100px;
+}
+
+.login-form input[type=file] {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ADACAC;
+    padding-bottom: 5px;
+}
+
+@media screen and (max-width: 739px) {
+    .edit {
+        margin: 0 15px 0 15px;
+    }
+}
