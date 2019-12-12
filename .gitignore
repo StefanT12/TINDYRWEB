@@ -47,3 +47,5 @@ _Chutzpah*
 *.ldf
 *.ndf
 .localhistory/
+
+Tindyr/obj/Debug/netcoreapp3.0/Tindyr.csprojAssemblyReference.cache
