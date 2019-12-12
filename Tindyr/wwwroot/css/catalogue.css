@@ -1064,7 +1064,7 @@ input.variation + label {
 
 @media (min-width: 992px) {
     main {
-        display: grid;
+        display: contents;
         grid: min-content auto/minmax(250px, 18%) 1fr;
         grid-gap: 40px;
     }

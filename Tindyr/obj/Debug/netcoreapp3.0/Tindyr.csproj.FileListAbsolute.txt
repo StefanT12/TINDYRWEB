@@ -319,3 +319,5 @@ C:/Users/Intel/source/repos/TINDYRWEB/Tindyr/obj/Debug/netcoreapp3.0/Razor/Views
 /Users/deni/Documents/Tindyr/TINDYRWEB/Tindyr/obj/Debug/netcoreapp3.0/Tindyr.dll
 /Users/deni/Documents/Tindyr/TINDYRWEB/Tindyr/obj/Debug/netcoreapp3.0/Tindyr.pdb
 /Users/deni/Documents/Tindyr/TINDYRWEB/Tindyr/obj/Debug/netcoreapp3.0/Razor/Views/Browse/Browsing.cshtml.g.cs
+/Users/deni/Documents/Tindyr/TINDYRWEB/Tindyr/bin/Debug/netcoreapp3.0/System.Security.Cryptography.Pkcs.dll
+/Users/deni/Documents/Tindyr/TINDYRWEB/Tindyr/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll
