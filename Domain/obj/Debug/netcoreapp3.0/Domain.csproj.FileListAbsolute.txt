@@ -21,3 +21,4 @@ C:/Users/Intel/source/repos/TINDYRWEB/Domain/obj/Debug/netcoreapp3.0/Domain.cspr
 /Users/deni/Documents/Tindyr/TINDYRWEB/Domain/obj/Debug/netcoreapp3.0/Domain.AssemblyInfo.cs
 /Users/deni/Documents/Tindyr/TINDYRWEB/Domain/obj/Debug/netcoreapp3.0/Domain.dll
 /Users/deni/Documents/Tindyr/TINDYRWEB/Domain/obj/Debug/netcoreapp3.0/Domain.pdb
+/Users/deni/Documents/Tindyr/TINDYRWEB/Domain/obj/Debug/netcoreapp3.0/Domain.csprojAssemblyReference.cache

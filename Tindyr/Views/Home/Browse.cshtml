@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+
+@addTagHelper *,Microsoft.AspNetCore.MVC.TagHelpers
+
+@{
+    ViewData["Title"] = "Browse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,500,500i,700" >
+    <link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">
+  
+    <script href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script href="~/js/gridList.js"></script>
+    <link rel="stylesheet" href="~/css/catalogue.css" >
+</head>
+
+<input class="variation" id="bluepurple" type="radio" value="1" name="color" checked><label for="bluepurple"></label>
+
+<input class="variation" id="sunset" type="radio" value="2" name="color"><label for="sunset"></label>
+
+<input class="variation" id="godiva" type="radio" value="3" name="color"><label for="godiva"></label>
+
+<input class="variation" id="dark" type="radio" value="4" name="color"><label for="dark"></label>
+
+<input class="variation" id="pinkaru" type="radio" value="5" name="color"><label for="pinkaru"></label>
+
+<main>
+  <section class="results-header">
+    <h1>Find animals near you.</h1>
+    <div class="results-header__option">
+      <div class="option__button option--grid selected"><span></span><span></span><span></span><span></span><span>Grid</span></div>
+      <div class="option__button option--list"><span></span><span></span><span></span><span>List</span></div>
+    </div>
+  </section>
+  <div class="filter-section__wrapper">
+    <section class="filter-section">
+      <h6>Filters</h6>
+      <div class="filters">
+        <h5 class="filters__title">Animal Type</h5>
+        <div class="filters__item">
+          <div class="checkbox"><input id="checkbox-1" type="checkbox"><label for="checkbox-1">Puppy<span class="box"></span>
+              <div class="tooltip top" data-tooltip="Younger than 18 months."><span><i class="icon-info"></i></span></div>
+            </label></div><span class="badge status-primary">10</span>
+        </div>
+        <div class="filters__item">
+          <div class="checkbox"><input id="checkbox-2" type="checkbox" checked><label for="checkbox-2">Cat<span class="box"></span></label></div><span class="badge status-primary">15</span>
+        </div>
+        <div class="filters__item">
+          <div class="checkbox"><input id="checkbox-3" type="checkbox"><label for="checkbox-3">Bunny<span class="box"></span></label></div><span class="badge status-primary">20</span>
+        </div>
+        <div class="filters__item">
+          <div class="checkbox"><input id="checkbox-4" type="checkbox"><label for="checkbox-4">Dog<span class="box"></span></label></div><span class="badge status-primary">38</span>
+        </div>
+      </div>
+      <div class="filters">
+        <h5 class="filters__title">Gender</h5>
+        <div class="filters__item">
+          <div class="checkbox"><input id="checkbox-5" type="checkbox"><label for="checkbox-5">Female<span class="box"></span></label></div><span class="badge status-primary">9</span>
+        </div>
+        <div class="filters__item">
+          <div class="checkbox"><input id="checkbox-6" type="checkbox" checked><label for="checkbox-6">Male<span class="box"></span></label></div><span class="badge status-primary">12</span>
+        </div>
+        <div class="filters__item">
+          <div class="checkbox"><input id="checkbox-7" type="checkbox"><label for="checkbox-7">Not specified<span class="box"></span></label></div><span class="badge status-primary">17</span>
+        </div>
+        
+    </section>
+  </div>
+  <section class="results-section results--grid">
+    <div class="profile">
+      <div class="profile__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png" alt="Doggo"></div>
+      <div class="profile__info">
+        <h3>Charlie</h3>
+        <p class="profile__info__extra">A very good boi that loves playing fetch and ice-cream! Gentle with everyone. Scared of the rain.</p>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Type</p>
+        <h5 class="profile__stats__info">Puppy</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Gender</p>
+        <h5>Male</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Age</p>
+        <h5 class="profile__stats__info">2 y</h5>
+      </div>
+      <div class="profile__cta"><a class="button">Like ❤️</a></div>
+    </div>
+    <div class="profile">
+      <div class="profile__image"><img src="https://static.dir.bg/uploads/images/2017/05/10/154293/768x576.jpg?_=1523987921" alt="Cat"></div>
+      <div class="profile__info">
+        <h3>Christine</h3>
+        <p class="profile__info__extra">A very sweet and playful cat that loves to hug and sleep a lot. Loving and care taking!</p>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Type</p>
+        <h5 class="profile__stats__info">Cat</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Gender</p>
+        <h5>Female</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Age</p>
+        <h5 class="profile__stats__info">6 m</h5>
+      </div>
+      <div class="profile__cta"><a class="button">Like ❤️</a></div>
+    </div>
+      <div class="profile">
+      <div class="profile__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png" alt="Doggo"></div>
+      <div class="profile__info">
+        <h3>Charlie</h3>
+        <p class="profile__info__extra">A very good boi that loves playing fetch and ice-cream! Gentle with everyone. Scared of the rain.</p>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Type</p>
+        <h5 class="profile__stats__info">Puppy</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Gender</p>
+        <h5>Male</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Age</p>
+        <h5 class="profile__stats__info">2 y</h5>
+      </div>
+      <div class="profile__cta"><a class="button">Like ❤️</a></div>
+    </div>
+      <div class="profile">
+      <div class="profile__image"><img src="https://static.dir.bg/uploads/images/2017/05/10/154293/768x576.jpg?_=1523987921" alt="Cat"></div>
+      <div class="profile__info">
+        <h3>Christine</h3>
+        <p class="profile__info__extra">A very sweet and playful cat that loves to hug and sleep a lot. Loving and care taking!</p>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Type</p>
+        <h5 class="profile__stats__info">Cat</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Gender</p>
+        <h5>Female</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Age</p>
+        <h5 class="profile__stats__info">6 m</h5>
+      </div>
+      <div class="profile__cta"><a class="button">Like ❤️</a></div>
+    </div>
+      <div class="profile">
+      <div class="profile__image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png" alt="Doggo"></div>
+      <div class="profile__info">
+        <h3>Charlie</h3>
+        <p class="profile__info__extra">A very good boi that loves playing fetch and ice-cream! Gentle with everyone. Scared of the rain.</p>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Type</p>
+        <h5 class="profile__stats__info">Puppy</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Gender</p>
+        <h5>Male</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Age</p>
+        <h5 class="profile__stats__info">2 y</h5>
+      </div>
+      <div class="profile__cta"><a class="button">Like ❤️</a></div>
+    </div>
+  </section>
+</main>
