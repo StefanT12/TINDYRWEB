@@ -41,7 +41,6 @@
 
   <ItemGroup>
     <Folder Include="Test\Queries\" />
-    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
   <ItemGroup>

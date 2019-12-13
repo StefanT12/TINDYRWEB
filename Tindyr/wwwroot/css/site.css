@@ -399,3 +399,144 @@ span {
         margin: 0 15px 0 15px;
     }
 }
+
+/* BROWSE ANIMALS FLEX*/
+/* Flex-related code */
+.browseflex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Or space-between or space-around */
+}
+
+    .browseflex > section {
+        align-items: center;
+        display: flex;
+        flex: 1 1 0;
+        flex-direction: column;
+        text-align: center;
+        max-width: 400px;
+
+        transition: transform .25s ease;
+        /*transform: scale(1);*/
+    }
+
+        .browseflex > section:hover {
+            /*transform: scale(1.03);*/
+            transform: translateY(-7px);
+        }
+
+        .browseflex > section > p {
+            flex-grow: 1;
+        }
+
+/* This rule ist just because of the responsive images */
+@media (max-width: 1600px) {
+    .browseflex > section {
+        max-width: 250px;
+    }
+}
+
+/* Basic styling for UI */
+
+.browseflex > section > img {
+    width: 400px;
+    border-radius: 2px;
+}
+
+  
+@media (max-width: 1600px) {
+    .browseflex > section > img {
+        width: 250px;
+    }
+}
+
+
+
+
+.browseflex > section > h2 {
+    font-size: 25px;
+}
+
+.browseflex > section {
+    background: #fff;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 4px;
+}
+
+.browseflex > section {
+    background: #fff;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 4px;
+}
+
+    .browseflex > section > button {
+        background: #F15D68 url(../ui/HeartIcon.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 2em;
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #F15D68;
+        font-weight: bold;
+        font-size: 13px;
+        padding: 1.5em 3em;
+        padding-left: 6em;
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
+    }
+
+        .browseflex > section > button:hover {
+            /*background-color: #006B6B;*/
+            background-size: 3em;
+            background-position: 1.5em 50%;
+            color: #FFF;
+        }
+
+.view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 45px 0 45px;
+}
+
+.view-images {
+    grid-template-columns: repeat(auto-fill, minmax(1fr, auto));
+    margin-right: 30px
+}
+
+.view-h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin: 0 45px 10px 45px;
+}
+
+.view h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    margin-top: 0;
+}
+
+.view p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 735px) {
+    .view {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        margin: 0 15px 0 15px;
+    }
+
+    .view-h1 {
+        margin: 0 15px 0 15px;
+    }
+}
+
+@media screen and (max-width: 1307px) {
+    .view-image img {
+        width: 100%;
+    }
+}

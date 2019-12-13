@@ -1,0 +1,47 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.MVC.TagHelpers
+@*@model Tindyr.Models.ProfileEdit.AllUserInformationModel*@
+@{
+    ViewData["Title"] = "ProfileEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <section class="content">
+        <br />
+        <br />
+        <h1 class="view-h1">View your profile</h1>
+        <article class="view">
+            <section class="view-images">
+                <div class="view-image">
+                    <img src="http://placekitten.com/850/400" alt="placeholderpic">
+                </div>
+
+                <div>
+                    <img src="http://placekitten.com/250/120" alt="placeholderpic">
+                    <img src="http://placekitten.com/250/120" alt="placeholderpic">
+                    <img src="http://placekitten.com/250/120" alt="placeholderpic">
+
+                </div>
+            </section>
+
+            <section>
+                <h3>Kittens</h3>
+                <p><span><i class="fas fa-paw"></i></span> Cat, No breed</p>
+                <p><span><i class="fas fa-mars"></i></span> Male</p>
+                <p><span><i class="fas fa-birthday-cake"></i></span> 3 years old</p>
+                <p><span><i class="fas fa-search"></i></span> Looking for: #breeding</p>
+
+                <h3>Owner</h3>
+                <p><span><i class="fas fa-user"></i></span> John Locke</p>
+                <p><span><i class="fas fa-phone-alt"></i></span> +4 8 15 16 23 42</p>
+                <button type="button" class="premium-button" title="employs" onclick="DoComfirm()" return false>Edit</button>
+                @section scripts{
+                    <script type="text/javascript">
+                      function DoComfirm()
+                        {
+                                    window.location.href = "@Url.Action("ProfileEdit", "ProfileEdit")";
+                        }
+                    </script>
+                }
+            </section>
+        </article>
+    </section>

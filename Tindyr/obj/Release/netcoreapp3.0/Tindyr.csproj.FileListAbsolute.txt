@@ -164,3 +164,7 @@ C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Tindyr.dl
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Tindyr.pdb
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\Home\Donate.cshtml.g.cs
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\Home\Premium.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\Home\Browse.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\Shared\_LandingPageExistingUser.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\Shared\_LandingPageNewUser.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\ProfileEdit\ProfileView.cshtml.g.cs

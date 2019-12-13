@@ -34,6 +34,11 @@ namespace Tindyr.Controllers
             return View(model);
         }
 
+        public async Task<IActionResult> ProfileView()
+        {
+            return View();
+        }
+
         [HttpPost]
         public async Task<IActionResult> ProfileEdit([FromForm]AllUserInformationModel model)
         {

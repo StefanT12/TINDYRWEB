@@ -13,13 +13,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Finger+Paint|Lato|Montserrat|Open+Sans|Work+Sans:400,700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css">
 
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">
-    <link rel="stylesheet" href="~/css/servicesGrid.css">
-
 </head>
 
 <body>
@@ -33,14 +26,23 @@
                         <i class="fas fa-caret-right"></i>
                         <a asp-area="" asp-controller="Auth" asp-action="LogIn">Log in</a>
                     </li>
+                </ul>
+            </div>
+
+            @*<div class="mini-nav">
+                <ul>
+                    <li>
+                        <i class="fas fa-caret-right"></i>
+                        <a asp-area="" asp-controller="Auth" asp-action="LogIn">Log in</a>
+                    </li>
 
                     <li>
                         <i class="fas fa-caret-right"></i>
                         <a asp-area="" asp-controller="Auth" asp-action="Register">Sign Up</a>
                     </li>
                 </ul>
-            </div>
-        } 
+            </div>*@
+        }
         else
         {
             <nav class="nav-container" id="nav">
@@ -48,21 +50,26 @@
                 <!-- Logo and Main navigation, when the user is logged -->
 
                 <a asp-area="" asp-controller="Home" asp-action="Index">Tindyr</a>
-                
+
                 <ul>
-                    <li>
+                    @*<li>
                         <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
+                    </li>*@
 
                     <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Premium">Get Premium</a>
+                        @*<a asp-area="" asp-controller="Home" asp-action="Premium">Get Premium</a>*@
                     </li>
 
                     <li>
                         <a asp-area="" asp-controller="Auth" asp-action="LogOut">Log Out</a>
                     </li>
+
                     <li>
-                        <a asp-area="" asp-controller="ProfileEdit" asp-action="ProfileEdit">Profile</a>
+                        <a asp-area="" asp-controller="ProfileEdit" asp-action="ProfileView">Profile</a>
+                    </li>
+
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Browse">Find Matches!</a>
                     </li>
                 </ul>
 
@@ -72,7 +79,7 @@
 
             </nav>
         }
-        
+
 
     </header>
 
@@ -90,11 +97,13 @@
         </section>
 
         <section>
-            <h4>Product</h4>
+            @*<h4>Product</h4>*@
             <ul>
-                <li><a href="#">Catalogue</a></li>
-                <li><a asp-area="" asp-controller="Home" asp-action="Premium">Get Premium</a></li>
-                <li><a asp-area="" asp-controller="Home" asp-action="Donate">Donate</a></li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li><a asp-area="" asp-controller="Home" asp-action="Donate">Donate</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Premium">Get Premium</a></li>
+                }
             </ul>
         </section>
 
