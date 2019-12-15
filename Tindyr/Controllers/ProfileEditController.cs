@@ -15,6 +15,8 @@ using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.Extensions.FileProviders;
 using System.Drawing;
 using Tindyr.Extensions;
+using Application.Users.Queries;
+using Application.Animals.Queries;
 
 namespace Tindyr.Controllers
 {
@@ -36,7 +38,17 @@ namespace Tindyr.Controllers
 
         public async Task<IActionResult> ProfileView()
         {
-            return View();
+            var grabAnimal = await (Mediator.Send(new GetAnimal { OfUser = User.Identity.Name }));
+            var grabProfile = await (Mediator.Send(new GetUserProfile { UserID = _authentication.UserId(User) }));
+
+            if(grabAnimal != null && grabProfile != null)
+            {
+                var allinfoContainer = new AllUserInformationModel();
+                allinfoContainer.Setup(grabProfile, grabAnimal);
+                return View(allinfoContainer);
+            }
+            //fail!
+            return View(new AllUserInformationModel());
         }
 
         [HttpPost]
@@ -53,31 +65,34 @@ namespace Tindyr.Controllers
                 PhoneNumber = model.UserProfileModel.PhoneNumber
             }));
 
-            //images
-            var newPicturesList = new List<string>();
-            var newFrontPict = "";
 
-            if(model.AnimalModel.CoverImage != null) 
+            var allImgs = new List<IFormFile>();
+            allImgs.Add(model.AnimalModel.CoverImage);
+            if(model.AnimalModel.Images != null)
             {
-                bool upload = UploadOnServer(model.AnimalModel.CoverImage);
-                if (upload)
-                {
-                    newFrontPict = model.AnimalModel.CoverImage.FileName;
-                }
+                allImgs.AddRange(model.AnimalModel.Images);
             }
 
-            if (model.AnimalModel.Images != null)
+            if (allImgs != null)
             {
-                foreach (var pict in model.AnimalModel.Images)
+                for(int i =0; i < allImgs.Count; i++)
                 {
-                    bool upload = UploadOnServer(pict);
+                    var newName = User.Identity.Name;
+                    if(i == 0)
+                    {
+                        newName += "front";
+                    }
+                    else
+                    {
+                        newName += "cover" + i.ToString();
+                    }
+                    bool upload = UploadOnServer(allImgs[i], newName + ".jpg");
                     if (upload)
                     {
-                        newPicturesList.Add(pict.FileName);
+
                     }
                 }
             }
-
             var animalResult = await (Mediator.Send(new UpdateAnimal
             {
                 UserId = userId,
@@ -86,38 +101,21 @@ namespace Tindyr.Controllers
                 AnimalGender = model.AnimalModel.AnimalGender,
                 AnimalName = model.AnimalModel.AnimalName,
                 AnimalType = model.AnimalModel.AnimalType,
-                PicturesName = newPicturesList,
-                FrontPicture = newFrontPict
             }));
 
             return View(model);
 
         }
 
-        private bool UploadOnServer(IFormFile image)
+        private bool UploadOnServer(IFormFile image, string imageName)
         {
            
             // Saving Image on Server
             if (image.Length > 0)
             {
-                return FileUpload.Upload(image);
+                return FileUpload.Upload(image, imageName);
             }
             return false;
         }
     }
 }
-
-//file upload form
-//<form method = "post" enctype="multipart/form-data" asp-controller="FileUpload" asp-action="Index">
-//    <div class="form-group">
-//        <div class="col-md-10">
-//            <p>Upload one or more files using this form:</p>
-//            <input type = "file" name= "files" multiple />
-//        </div>
-//    </div>
-//    <div class="form-group">
-//        <div class="col-md-10">
-//            <input type = "submit" value="Upload" />
-//        </div>
-//    </div>
-//</form>

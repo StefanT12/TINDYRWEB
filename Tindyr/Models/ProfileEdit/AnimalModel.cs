@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Application.Animals;
+using Application.Common.Mapping;
+using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -22,6 +25,16 @@ namespace Tindyr.Models.ProfileEdit
         [BindProperty]
         [FileExtensions(Extensions = "jpg,jpeg,png,pdf")]
         public IFormFile CoverImage { get; set; }
-        //public virtual ICollection<Picture> Pictures { get; set; }
+
+        public void Setup(GetAnimalVM vm)
+        {
+            AnimalName = vm.AnimalName;
+            AnimalGender = vm.AnimalGender;
+            AnimalType = vm.AnimalType;
+            AnimalBreed = vm.AnimalBreed;
+            LookingFor = vm.LookingFor;
+            AnimalDateOfBirth = vm.AnimalDateOfBirth;
+        }
+        
     }
 }

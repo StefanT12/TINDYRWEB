@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistence;
 
 namespace Persistence.Migrations
 {
     [DbContext(typeof(TindyrDbContext))]
-    partial class TindyrDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191214224110_TindyrDbTestReady5")]
+    partial class TindyrDbTestReady5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,6 +42,9 @@ namespace Persistence.Migrations
 
                     b.Property<string>("AnimalType")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FrontPictureId")
+                        .HasColumnType("int");
 
                     b.Property<string>("LookingFor")
                         .HasColumnType("nvarchar(max)");
@@ -76,6 +81,33 @@ namespace Persistence.Migrations
                         .HasName("MatchId");
 
                     b.ToTable("Matches");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Picture", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AnimalId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("AnimalId1")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id")
+                        .HasName("Id");
+
+                    b.HasIndex("AnimalId")
+                        .IsUnique();
+
+                    b.HasIndex("AnimalId1");
+
+                    b.ToTable("Pictures");
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>
@@ -139,6 +171,19 @@ namespace Persistence.Migrations
                         .HasForeignKey("Domain.Entities.Animal", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Entities.Picture", b =>
+                {
+                    b.HasOne("Domain.Entities.Animal", "Animal")
+                        .WithOne("FrontPicture")
+                        .HasForeignKey("Domain.Entities.Picture", "AnimalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Animal", null)
+                        .WithMany("Pictures")
+                        .HasForeignKey("AnimalId1");
                 });
 
             modelBuilder.Entity("Domain.Entities.UserProfile", b =>

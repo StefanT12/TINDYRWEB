@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Application.Users.Queries.GetProfile
+namespace Application.Users.Queries
 {
     public class GetUserProfileHandler : IRequestHandler<GetUserProfile, UserProfileDetailsVM>
     {

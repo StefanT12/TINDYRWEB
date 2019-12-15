@@ -1,6 +1,5 @@
 ﻿using Application.Common.Interfaces;
 using Application.Common.Models;
-using Application.Pictures.Queries;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
@@ -21,7 +20,5 @@ namespace Application.Animals.Commands
         public string AnimalBreed { get; set; }
         public string LookingFor { get; set; }
         public DateTime AnimalDateOfBirth { get; set; }
-        public virtual ICollection<string> PicturesName { get; set; }
-        public string FrontPicture { get; set; }
     }
 }

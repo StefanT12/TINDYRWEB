@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Application.Users.Queries.GetProfile
+namespace Application.Users.Queries
 {
     public class GetUserProfile : IRequest<UserProfileDetailsVM> 
     {

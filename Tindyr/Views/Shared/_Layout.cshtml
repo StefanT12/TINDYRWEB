@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <!-- Mini Navigation (Log in/Sign up), when the user is not logged-->
+        <!-- Mini Navigation (Log in), when the user is not logged-->
         @if (!User.Identity.IsAuthenticated)
         {
             <div class="mini-nav">
@@ -28,57 +28,38 @@
                     </li>
                 </ul>
             </div>
-
-            @*<div class="mini-nav">
-                <ul>
-                    <li>
-                        <i class="fas fa-caret-right"></i>
-                        <a asp-area="" asp-controller="Auth" asp-action="LogIn">Log in</a>
-                    </li>
-
-                    <li>
-                        <i class="fas fa-caret-right"></i>
-                        <a asp-area="" asp-controller="Auth" asp-action="Register">Sign Up</a>
-                    </li>
-                </ul>
-            </div>*@
         }
-        else
+
+        <!-- Logo and Main navigation, when the user is logged -->
+    <nav class="nav-container" id="nav">
+
+        <a asp-area="" asp-controller="Home" asp-action="Index">Tindyr</a>
+
+        @if (User.Identity.IsAuthenticated)
         {
-            <nav class="nav-container" id="nav">
+            <ul>
 
-                <!-- Logo and Main navigation, when the user is logged -->
+                <li>
+                    <a asp-area="" asp-controller="Auth" asp-action="LogOut">Log Out</a>
+                </li>
 
-                <a asp-area="" asp-controller="Home" asp-action="Index">Tindyr</a>
+                <li>
+                    <a asp-area="" asp-controller="ProfileEdit" asp-action="ProfileView">Profile</a>
+                </li>
 
-                <ul>
-                    @*<li>
-                        <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>*@
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Browse">Find Matches!</a>
+                </li>
 
-                    <li>
-                        @*<a asp-area="" asp-controller="Home" asp-action="Premium">Get Premium</a>*@
-                    </li>
-
-                    <li>
-                        <a asp-area="" asp-controller="Auth" asp-action="LogOut">Log Out</a>
-                    </li>
-
-                    <li>
-                        <a asp-area="" asp-controller="ProfileEdit" asp-action="ProfileView">Profile</a>
-                    </li>
-
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Browse">Find Matches!</a>
-                    </li>
-                </ul>
-
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fas fa-bars"></i>
-                </a>
-
-            </nav>
+            </ul>
         }
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fas fa-bars"></i>
+        </a>
+
+    </nav>
+
 
 
     </header>
