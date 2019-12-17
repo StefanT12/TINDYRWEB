@@ -21,7 +21,8 @@ namespace Application.Animals.Queries
         }
         public async Task<GetAnimalVM> Handle(GetAnimal request, CancellationToken cancellationToken)
         {
-            var animal = await _context.Animals.FirstOrDefaultAsync(a => a.User.Username.Equals(request.OfUser));
+            var animals = _context.Animals.Include(a => a.User);
+           var animal = await animals.FirstOrDefaultAsync(a => a.User.Username.Equals(request.OfUser));
             var animalVM = _mapper.Map<GetAnimalVM>(animal);
 
             return animalVM;

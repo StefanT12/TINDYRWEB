@@ -1,40 +1,79 @@
-﻿
+﻿@model Tindyr.Models.Browse.BrowseAnimalsModel
 @{
     ViewData["Title"] = "Browse";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="browseflex">
+@if (Model.UserIsValidated)
+{
+    <div class="browseflex">
 
-    <section>
-        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1094874726.png" alt="Smartphone" />
-        <button class="premium-button">Like</button>
-    </section>
+        @foreach (var animal in Model.Animals)
+        {
+        <section id=@animal.ForUser>
+            <img src=@Url.Content("~/userimages/"+animal.ForUser +"front" + ".jpg") alt="Anim_Pict" />
+            <p>@animal.AnimalName, @animal.AnimalBreed</p>
+            <input type="button" class="premium-button" onclick="LikeThisUserASP('@animal.ForUser')" value="Like">
+            @*<input type="button" class="premium-button" onclick="LikeThisUser('@User.Identity.Name','@animal.ForUser')" value="Like">*@
+        </section>
+        }
 
-    <section>
-        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1094874726.png" alt="Smartphone" />
-        <button class="premium-button">Like</button>
-    </section>
 
-    <section>
-        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1094874726.png" alt="Smartphone" />
-        <button class="premium-button">Like</button>
-    </section>
+    </div>
+}
+else
+{
+    @await Html.PartialAsync("_UrgeEditProfile");
+}
 
-    <section>
-        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1094874726.png" alt="Smartphone" />
-        <button class="premium-button">Like</button>
-    </section>
 
-    <section>
-        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1094874726.png" alt="Smartphone" />
-        <button class="premium-button">Like</button>
-    </section>
+<script src="~/lib/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/match.js"></script>
 
-    <section>
-        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1094874726.png" alt="Smartphone" />
-        <button class="premium-button">Like</button>
-    </section>
+@section scripts{
+    <script type="text/javascript">
+        function GoEdit()
+        {
+            window.location.href = "@Url.Action("ProfileEdit", "ProfileEdit")";
+        }
+      
+        function LikeThisUserASP(username)
+        {
+            window.location.href = ("@Url.Action("Browse", "Home", new { username = "usernamevalue" })").replace("usernamevalue", username);
+        }
 
-</div>
+        function LikeThisUser(fromUser, toUser) {
+            console.log(fromUser + " to " + toUser);
+            //this invokes the c# method of our hub with the parameters needed to send the message to the other user
+            connection.invoke("Like", fromUser, toUser)
+                .then(function (result) {
+                    console.log(result)
+                    if (result == "Liked") {
+                        //put toUser in WhoYouLiked and remove him from browse
+                        RemoveElement(toUser);
+                    }
+                    else if (result == "Matched") {
+                        //put toUser in Matches
+                        RemoveElement(toUser);
+                    }
+                    else {
+                        //failed or liked already
+                    }
+                    console.log(result);
+                }, function (err) {
+                    return console.error(err.toString());//error handling
+                });
+        }
+
+        function RemoveElement(id) {
+            console.log(id);
+            var elem = document.getElementById(id);
+            elem.parentNode.removeChild(elem);
+        }
+    </script>
+}
+
+
+
+
 

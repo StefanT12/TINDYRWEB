@@ -168,3 +168,15 @@ C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Vie
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\Shared\_LandingPageExistingUser.cshtml.g.cs
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\Shared\_LandingPageNewUser.cshtml.g.cs
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\ProfileEdit\ProfileView.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\Home\MyMatches.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\ProfileEdit\ViewOtherProfile.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Release\netcoreapp3.0\Razor\Views\Shared\_UrgeEditProfile.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Release\netcoreapp3.0\MessagePack.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Release\netcoreapp3.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Release\netcoreapp3.0\Microsoft.Azure.SignalR.Common.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Release\netcoreapp3.0\Microsoft.Azure.SignalR.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Release\netcoreapp3.0\Microsoft.Azure.SignalR.Protocols.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Release\netcoreapp3.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Release\netcoreapp3.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Release\netcoreapp3.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Release\netcoreapp3.0\System.IdentityModel.Tokens.Jwt.dll

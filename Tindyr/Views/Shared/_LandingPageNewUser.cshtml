@@ -4,24 +4,41 @@
 
 @addTagHelper *,Microsoft.AspNetCore.MVC.TagHelpers
 
-    <article class="donate">
-        <div>
-            <h1 class="premium-headline">Welcome to Tindyr <span><i class="fas fa-heart"></i></span></h1>
-            <p class="donate-p">
-                Become part of <span>Tindyr</span> and join thousands in the search of their next pet’s soulmate. We make it easy, accessible and fun!
-            </p>
-            @* <button type="" asp-area="" asp-controller="Auth" asp-action="Register" class="premium-button">Sign Up</button>*@
+<div class="ellipse"></div>
+<article class="donate new-user">
+    <div class="new-user-content">
+        <h1 class="landing-h1">BREEDING HAS NEVER BEEN SO EASY</h1>
+        <p class="donate-p">
+            Become part of <span>Tindyr</span> and join thousands in the search of their next pet’s soulmate. We make it easy, accessible and fun!
+        </p>
+        @* <button type="" asp-area="" asp-controller="Auth" asp-action="Register" class="premium-button">Sign Up</button>*@
 
-            <button type="button" class="premium-button" title="employs" onclick="DoComfirm()" return false>Join a great community!</button>
-            
-
-        </div>
+        <button type="button" class="premium-button" title="employs" onclick="DoComfirm()" return false>Join a great community!</button>
 
 
+    </div>
 
-        <img class="grid-row-one" src="~/images/dog-with-a-heart.png" alt="dog">
+    <img class="grid-row-one" src="~/images/dog-with-a-heart.png" alt="dog">
 
+</article>
 
+<article class="featured">
+    <h1>Meet our featured pets</h1>
+    <p>You want to see your pet here? Register and get <span>premium</span> today!</p>
+</article>
 
+<article class="featured-slider">
+</article>
 
-    </article>
+<article class="about">
+    <h2>Tindyr</h2>
+    <hr />
+    <h1>Learn More</h1>
+    <div class="about-text">
+        <p>Tindyr is a startup not like many other: our service focuses on users finding their perfect breed or play partner for their pets</p>
+        <p>Above all, we are a team dedicated to our community here, at Tindyr, where we strive to improve our services and our user day-today interaction.</p>
+    </div>
+
+    <button type="button" class="premium-button" title="tip" onclick="GoTip()" return false>Give us a tip!</button>
+
+</article>

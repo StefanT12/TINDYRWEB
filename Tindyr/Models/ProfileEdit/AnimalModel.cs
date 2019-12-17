@@ -19,13 +19,10 @@ namespace Tindyr.Models.ProfileEdit
         public string AnimalBreed { get; set; }
         public string LookingFor { get; set; }
         public DateTime AnimalDateOfBirth { get; set; }
+        public string ForUser { get; set; }
         [BindProperty]
-        [FileExtensions(Extensions = "jpg,jpeg,png,pdf")]
-        public ICollection<IFormFile> Images { get; set; }
-        [BindProperty]
-        [FileExtensions(Extensions = "jpg,jpeg,png,pdf")]
-        public IFormFile CoverImage { get; set; }
-
+        [FileExtensions(Extensions = "jpg,jpeg,png")]
+        public IFormFile Image { get; set; } 
         public void Setup(GetAnimalVM vm)
         {
             AnimalName = vm.AnimalName;
@@ -34,7 +31,23 @@ namespace Tindyr.Models.ProfileEdit
             AnimalBreed = vm.AnimalBreed;
             LookingFor = vm.LookingFor;
             AnimalDateOfBirth = vm.AnimalDateOfBirth;
+            ForUser = vm.User.Username;
         }
-        
+
+        public int GetYear()
+        {
+            var today = DateTime.Today;
+            // Calculate the age.
+            var age = today.Year - AnimalDateOfBirth.Year;
+            // Go back to the year the person was born in case of a leap year
+            if (AnimalDateOfBirth.Date > today.AddYears(-age)) age--;
+            
+            return age;
+        }
+
+        public bool GetIfValid()
+        {
+            return AnimalName != null && AnimalGender != null && AnimalType != null && AnimalBreed != null && LookingFor != null;
+        }
     }
 }

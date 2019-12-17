@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Tindyr.Models.ProfileEdit.UserInfoStatusModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -9,15 +11,38 @@
 }
 else
 {
-    @await Html.PartialAsync("_LandingPageExistingUser")
+    @if (!Model.Validated)//tells user he should edit his profile
+    {
+        @await Html.PartialAsync("_UrgeEditProfile");
+    }
+    else
+    {
+        @await Html.PartialAsync("_LandingPageExistingUser")
+    }
+
 }
+
+
 
 @section scripts{
     <script type="text/javascript">
-                      function DoComfirm()
-                        {
-                                    window.location.href = "@Url.Action("Register", "Auth")";
-                        }
+        function DoComfirm()
+        {
+            window.location.href = "@Url.Action("Register", "Auth")";
+        }
+
+        function GoEdit()
+        {
+            console.log("heyhey");
+            window.location.href = "@Url.Action("ProfileEdit", "ProfileEdit")";
+        }
+
+        function GoTip()
+        {
+            console.log("heyhey");
+            window.location.href = "@Url.Action("Donate", "Home")";
+        }
+
     </script>
 }
 

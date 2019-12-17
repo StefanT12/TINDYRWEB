@@ -30,7 +30,6 @@ namespace Matching
                     Clients.Client(connectionId).SendAsync(function, receiver, arg);
             }
         }
-
         public async Task<string> Like(string fromUser, string toUser)
         {
             var result = await _mediator.Send(
@@ -54,14 +53,18 @@ namespace Matching
                     SendToConnection(receiver: toUser, function: "Match", arg: fromUser);
                     returnValue = "Matched";
                 }
+                return returnValue;
             }
-
-            if (result.ResultMessage == ResultErrors.LikedAlready)
+            else
             {
-                returnValue = "LikedAlready";
-            }
+                if (result.ResultMessage == ResultErrors.LikedAlready)
+                {
+                    returnValue = "LikedAlready";
+                }
 
-            returnValue = "Fail";
+                returnValue = "Fail";
+            }
+            
             
             //SendToConnection(receiver: fromUser, function: "LikeSent", arg: returnValue);
 

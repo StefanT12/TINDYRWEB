@@ -35,6 +35,14 @@ namespace Tindyr
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            ////for js to call on backend
+            services.AddCors(options => options.AddPolicy("CorsPolicy",
+             builder =>
+             {
+                 builder.AllowAnyMethod().AllowAnyHeader()
+                        .WithOrigins("https://tindyr.azurewebsites.net")
+                        .AllowCredentials();
+             }));
             //every layer of the project, Application, ApplicationUser etc has a dependency injection extension of Services, we use that here to add all dependencies we need for these layers and to initialize/use them.
             //the mediator pattern, we first init the dependency injection 'helper'
             services.AddMediatR(Assembly.GetExecutingAssembly());
@@ -108,6 +116,8 @@ namespace Tindyr
             app.UseAuthorization();
 
             app.UseRouting();
+
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {

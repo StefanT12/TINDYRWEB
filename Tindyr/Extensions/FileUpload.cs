@@ -45,11 +45,12 @@ namespace Tindyr.Extensions
         }
         public static bool Upload(IFormFile image, string newName)
         {
-            var filePath = Path.Combine("wwwroot/userimages", newName);
+            var filePath = Path.Combine("wwwroot/userimages", newName+ ".jpg");
             using (var uploadingImgStream = image.OpenReadStream())
             {
+                var dirFiles = Directory.EnumerateFiles("wwwroot/userimages", "*", SearchOption.AllDirectories);
                 //check for dupes 
-                foreach (var imgInServer in Directory.EnumerateFiles("wwwroot/userimages", "*", SearchOption.AllDirectories))
+                foreach (var imgInServer in dirFiles)
                 {
                     var c = CompareImgSimilarityvalue(imgInServer, uploadingImgStream);
                     if (c > 253.44)
@@ -65,6 +66,13 @@ namespace Tindyr.Extensions
                 image.CopyTo(fileStream);
             }
             return true;
+        }
+        public static bool Exists(string name)
+        {
+            var dirPath = "wwwroot/userimages";
+            var dirFiles = Directory.EnumerateFiles(dirPath, "*", SearchOption.AllDirectories);
+            var filePath = Path.Combine(dirPath, name);
+            return dirFiles.Contains(filePath);
         }
     }
 }

@@ -27,6 +27,7 @@ namespace Application.Matches.Commands
             if(match != null)
             {
                 match.User2LikedBack = true;
+                await _dbContext.SaveChangesAsync(cancellationToken);
                 return Result.Success(ResultSuccessMessage.UsersMatched);
             }
 
@@ -44,6 +45,8 @@ namespace Application.Matches.Commands
             match = new Match { User1 = request.FromUser, User2 = request.ToUser };
 
             _dbContext.Matches.Add(match);
+
+            await _dbContext.SaveChangesAsync(cancellationToken);
 
             return Result.Success(ResultSuccessMessage.Liked);
         }

@@ -149,8 +149,6 @@ C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\ru\Microsof
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Auth\LogIn.cshtml.g.cs
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Auth\Register.cshtml.g.cs
 E:\school\Git\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\appsettings.Development.json
@@ -482,3 +480,17 @@ C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_LandingPageNewUser.cshtml.g.cs
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_LandingPageExistingUser.cshtml.g.cs
 C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\ProfileEdit\ProfileView.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_UrgeEditProfile.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\Home\MyMatches.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Razor\Views\ProfileEdit\ViewOtherProfile.cshtml.g.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\obj\Debug\netcoreapp3.0\Tindyr.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\MessagePack.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Microsoft.Azure.SignalR.Common.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Microsoft.Azure.SignalR.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Microsoft.Azure.SignalR.Protocols.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Intel\source\repos\TINDYRWEB\Tindyr\bin\Debug\netcoreapp3.0\System.IdentityModel.Tokens.Jwt.dll

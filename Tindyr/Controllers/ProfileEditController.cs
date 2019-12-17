@@ -17,6 +17,7 @@ using System.Drawing;
 using Tindyr.Extensions;
 using Application.Users.Queries;
 using Application.Animals.Queries;
+using Application.Matches.Queries;
 
 namespace Tindyr.Controllers
 {
@@ -30,25 +31,48 @@ namespace Tindyr.Controllers
             _authentication = authentication;
            // _fileProvider = fileProvider;
         }
-        public IActionResult ProfileEdit()
+        public async Task<IActionResult> ProfileEdit()
         {
-            var model = new AllUserInformationModel();
+            var model = await GetInfoModel();
             return View(model);
         }
 
         public async Task<IActionResult> ProfileView()
         {
-            var grabAnimal = await (Mediator.Send(new GetAnimal { OfUser = User.Identity.Name }));
-            var grabProfile = await (Mediator.Send(new GetUserProfile { UserID = _authentication.UserId(User) }));
+            var info = await GetInfoModel();
+            if (info.Set)
+            {
+                //fail!
+            }
 
-            if(grabAnimal != null && grabProfile != null)
+            return View(info);
+        }
+
+        public async Task<AllUserInformationModel> GetInfoModel(bool wArgs = false, string username = "")
+        {
+            if (!wArgs)
+            {
+                username = User.Identity.Name;
+            }
+            var grabAnimal = await (Mediator.Send(new GetAnimal { OfUser = username }));
+            var grabProfile = await (Mediator.Send(new GetUserProfile {ByName = true, Username = username }));
+
+            if (grabAnimal != null && grabProfile != null)
             {
                 var allinfoContainer = new AllUserInformationModel();
                 allinfoContainer.Setup(grabProfile, grabAnimal);
-                return View(allinfoContainer);
+                allinfoContainer.Set = true;
+                return allinfoContainer;
             }
-            //fail!
-            return View(new AllUserInformationModel());
+
+            return new AllUserInformationModel();
+        }
+
+        public async Task<IActionResult> ViewOtherProfile(string username)
+        {
+            var info = await GetInfoModel(true, username);
+            info.AsMatching = await (Mediator.Send(new AreUsersMatching { User1 = username, User2 = User.Identity.Name}));
+            return View(info);
         }
 
         [HttpPost]
@@ -65,34 +89,6 @@ namespace Tindyr.Controllers
                 PhoneNumber = model.UserProfileModel.PhoneNumber
             }));
 
-
-            var allImgs = new List<IFormFile>();
-            allImgs.Add(model.AnimalModel.CoverImage);
-            if(model.AnimalModel.Images != null)
-            {
-                allImgs.AddRange(model.AnimalModel.Images);
-            }
-
-            if (allImgs != null)
-            {
-                for(int i =0; i < allImgs.Count; i++)
-                {
-                    var newName = User.Identity.Name;
-                    if(i == 0)
-                    {
-                        newName += "front";
-                    }
-                    else
-                    {
-                        newName += "cover" + i.ToString();
-                    }
-                    bool upload = UploadOnServer(allImgs[i], newName + ".jpg");
-                    if (upload)
-                    {
-
-                    }
-                }
-            }
             var animalResult = await (Mediator.Send(new UpdateAnimal
             {
                 UserId = userId,
@@ -101,7 +97,28 @@ namespace Tindyr.Controllers
                 AnimalGender = model.AnimalModel.AnimalGender,
                 AnimalName = model.AnimalModel.AnimalName,
                 AnimalType = model.AnimalModel.AnimalType,
+                LookingFor = model.AnimalModel.LookingFor
             }));
+
+            var imgList = new List<IFormFile>();
+            imgList.Add(model.AnimalModel.Image);
+            
+            for(int i =0;i < imgList.Count; i++)
+            {
+                var name = User.Identity.Name;
+                if(i == 0)
+                {
+                    name += "front";
+                }
+                else
+                {
+                    name += "cover" + i.ToString();
+                }
+                if(imgList[i] != null)
+                {
+                    bool upload = UploadOnServer(imgList[i], name);
+                }
+            }
 
             return View(model);
 
@@ -110,7 +127,6 @@ namespace Tindyr.Controllers
         private bool UploadOnServer(IFormFile image, string imageName)
         {
            
-            // Saving Image on Server
             if (image.Length > 0)
             {
                 return FileUpload.Upload(image, imageName);

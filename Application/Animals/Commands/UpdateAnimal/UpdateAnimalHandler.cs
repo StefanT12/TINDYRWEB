@@ -28,7 +28,7 @@ namespace Application.Animals.Commands
                 animal.AnimalGender = request.AnimalGender;
                 animal.AnimalName = request.AnimalName;
                 animal.AnimalType = request.AnimalType;
-                
+                animal.LookingFor = request.LookingFor;
                 
                 await _context.SaveChangesAsync(cancellationToken);
                 return Result.Success();

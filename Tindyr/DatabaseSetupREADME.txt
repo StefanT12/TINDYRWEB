@@ -6,7 +6,7 @@ Run these commands (After you access Tools > Command Line > Developer Command Pr
 
 cd Persistence //gets you in the Persistence project folder
 
-dotnet ef migrations add TindyrDbTestReady6 -s ..\Tindyr\Tindyr.csproj --context TindyrDbContext //adds a migration in the Persistence project for TindyrDbContext
+dotnet ef migrations add TindyrDbTestReady7 -s ..\Tindyr\Tindyr.csproj --context TindyrDbContext //adds a migration in the Persistence project for TindyrDbContext
 dotnet ef database update -s ..\Tindyr\Tindyr.csproj --context TindyrDbContext//runs the migration from Persistence into Tindyr project, thus updating/creating all tables needed for TindyrDbContext
 
 do the same for AppChat

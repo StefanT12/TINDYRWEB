@@ -11,6 +11,8 @@ namespace Application.Animals.Queries
         public string Gender { get; set; }
         public string Type { get; set; }
         public bool ByGenderAndType { get; set; }
+        public bool OppositeGender { get; set; }
+        public bool SameType { get; set; }
         public AnimalMatchParam AnimalMatchParam { get; set; } 
     }
 }

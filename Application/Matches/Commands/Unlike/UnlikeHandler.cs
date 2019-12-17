@@ -20,10 +20,10 @@ namespace Application.Matches.Commands
             _dbContext = dbContext;
         }
         public async Task<Result> Handle(Unlike request, CancellationToken cancellationToken)
-        {
-            var match = await _dbContext.Matches.SingleOrDefaultAsync(m => m.InteractionExists(request.FromUser, request.ToUser));
+        {//TODO refactor this crap HANDLER of UNLIKE
+            var match = await _dbContext.Matches.SingleOrDefaultAsync(m => ((m.User1.Equals(request.FromUser) && m.User2.Equals(request.ToUser)) || (m.User1.Equals(request.ToUser) && m.User2.Equals(request.FromUser))) && m.User2LikedBack);
 
-            if(match == null)
+            if (match == null)
             {
                 return Result.Failure(ResultErrors.UnlikedAlready);
             }

@@ -11,25 +11,28 @@
     <br />
     <h1 class="view-h1">View your profile</h1>
     <article class="view">
-        <section class="view-images">
-            <div class="view-image">
-                <img src= @Url.Content("~/userimages/"+User.Identity.Name+"front.jpg") alt="placeholderpic" >
+        <section class="gallery">
+            <div class="image">
+                <img src=@Url.Content("~/userimages/"+User.Identity.Name+"front.jpg") alt="placeholderpic">
             </div>
 
-            <div>
-                <img src="http://placekitten.com/250/120" alt="placeholderpic">
-                <img src="http://placekitten.com/250/120" alt="placeholderpic">
-                <img src="http://placekitten.com/250/120" alt="placeholderpic">
+            
+                @for (int i = 1; i < 4; i++)
+                {
+                    <div class="image">
+                        <img src=@Url.Content("~/userimages/"+User.Identity.Name+"gallery" + i.ToString() + ".jpg") alt="placeholderpic">
+                    </div>
+                }
 
-            </div>
+            
         </section>
 
         <section>
             <h3>@Model.AnimalModel.AnimalName</h3>
             <p><span><i class="fas fa-paw"></i></span> @Model.AnimalModel.AnimalType, @Model.AnimalModel.AnimalBreed</p>
             <p><span><i class="fas fa-mars"></i></span> @Model.AnimalModel.AnimalGender</p>
-            <p><span><i class="fas fa-birthday-cake"></i></span> 3 years old</p>
-            <p><span><i class="fas fa-search"></i></span> Looking for:@Model.AnimalModel.LookingFor</p>
+            <p><span><i class="fas fa-birthday-cake"></i></span> @Model.AnimalModel.GetYear() years old</p>
+            <p><span><i class="fas fa-search"></i></span> Looking for: @Model.AnimalModel.LookingFor</p>
 
             <h3>Owner</h3>
             <p><span><i class="fas fa-user"></i></span> @Model.UserProfileModel.FirstName @Model.UserProfileModel.LastName</p>
@@ -46,3 +49,41 @@
         </section>
     </article>
 </section>
+
+
+@*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css">
+<section class="content">
+    <h1 class="view-h1">View your profile</h1>
+    <article class="view">
+        <section class="gallery">
+            <div class="image">
+                <img src="https://placekitten.com/900/400" alt="">
+            </div>
+
+            <div class="image">
+                <img src="https://placekitten.com/650/400" alt="">
+            </div>
+
+            <div class="image">
+                <img src="https://placekitten.com/650/400" alt="">
+            </div>
+
+            <div class="image">
+                <img src="https://placekitten.com/650/400" alt="">
+            </div>
+        </section>
+
+        <section>
+            <h3>Kittens</h3>
+            <p><span><i class="fas fa-paw"></i></span> Cat, No breed</p>
+            <p><span><i class="fas fa-mars"></i></span> Male</p>
+            <p><span><i class="fas fa-birthday-cake"></i></span> 3 years old</p>
+            <p><span><i class="fas fa-search"></i></span> Looking for: #breeding</p>
+
+            <h3>Owner</h3>
+            <p><span><i class="fas fa-user"></i></span> John Locke</p>
+            <p><span><i class="fas fa-phone-alt"></i></span> +4 8 15 16 23 42</p>
+            <button type="button" class="premium-button">Edit</button>
+        </section>
+    </article>
+</section>*@

@@ -8,44 +8,44 @@ connection.start().then(function () {
 });
 /////SEND TO OTHER USERS
 //LIKE
-document.getElementById("likeButton").addEventListener("click", function (event) { // get some button
-    var fromUser = '';
-    var toUser = '';
-    //this invokes the c# method of our hub with the parameters needed to send the message to the other user
-    connection.invoke("Like", fromUser, toUser)
-        .then(function (result) {
-            if (result == "Liked") {
-                //put toUser in WhoYouLiked
-            }
-            else if (result == "Matched") {
-                //put toUser in Matches
-            }
-            else {
-                //failed or liked already
-            }
-        }, function (err) {
-            return console.error(err.toString());//error handling
-        });
-    event.preventDefault();
-});
+//document.getElementById("likeButton").addEventListener("click", function (event) { // get some button
+//    var fromUser = '';
+//    var toUser = '';
+//    //this invokes the c# method of our hub with the parameters needed to send the message to the other user
+//    connection.invoke("Like", fromUser, toUser)
+//        .then(function (result) {
+//            if (result == "Liked") {
+//                //put toUser in WhoYouLiked
+//            }
+//            else if (result == "Matched") {
+//                //put toUser in Matches
+//            }
+//            else {
+//                //failed or liked already
+//            }
+//        }, function (err) {
+//            return console.error(err.toString());//error handling
+//        });
+//    event.preventDefault();
+//});
 //UNLIKE
-document.getElementById("likeButton").addEventListener("click", function (event) { // get some button
-    var fromUser = '';
-    var toUser = '';
-    //this invokes the c# method of our hub with the parameters needed to send the message to the other user
-    connection.invoke("Unlike", fromUser, toUser)
-        .then(function (result) {
-            if (result == "Unliked") {
-                //unlike the bastard, take him out from Matches, WhoYouLiked or WhoLikesYou
-            }
-            else {
-                //failed or unliked already
-            }
-        }, function (err) {
-            return console.error(err.toString());//error handling
-        });
-    event.preventDefault();
-});
+//document.getElementById("likeButton").addEventListener("click", function (event) { // get some button
+//    var fromUser = '';
+//    var toUser = '';
+//    //this invokes the c# method of our hub with the parameters needed to send the message to the other user
+//    connection.invoke("Unlike", fromUser, toUser)
+//        .then(function (result) {
+//            if (result == "Unliked") {
+//                //unlike the bastard, take him out from Matches, WhoYouLiked or WhoLikesYou
+//            }
+//            else {
+//                //failed or unliked already
+//            }
+//        }, function (err) {
+//            return console.error(err.toString());//error handling
+//        });
+//    event.preventDefault();
+//});
 ////RECEIVE FROM OTHER USERS
 //Receive like
 connection.on("LikeReceived", function (from) {

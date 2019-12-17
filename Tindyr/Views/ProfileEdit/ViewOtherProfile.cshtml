@@ -1,0 +1,102 @@
+﻿@model Tindyr.Models.ProfileEdit.AllUserInformationModel
+
+@{
+    ViewData["Title"] = "ViewOtherProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/lib/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/match.js"></script>
+
+<section class="content">
+    <br />
+    <br />
+    <h1 class="view-h1">@Model.AnimalModel.AnimalName's Profile</h1>
+    <article class="view">
+        <section class="gallery">
+            <div class="image">
+                <img src=@Url.Content("~/userimages/"+@Model.AnimalModel.ForUser+"front.jpg") alt="placeholderpic">
+            </div>
+
+
+            @for (int i = 1; i < 4; i++)
+            {
+                <div class="image">
+                    <img src=@Url.Content("~/userimages/"+User.Identity.Name+"gallery" + i.ToString() + ".jpg") alt="placeholderpic">
+                </div>
+            }
+
+
+        </section>
+
+        <section>
+            <h3></h3>
+            <p><span><i class="fas fa-paw"></i></span> @Model.AnimalModel.AnimalType, @Model.AnimalModel.AnimalBreed</p>
+            <p><span><i class="fas fa-mars"></i></span> @Model.AnimalModel.AnimalGender</p>
+            <p><span><i class="fas fa-birthday-cake"></i></span> @Model.AnimalModel.GetYear() years old</p>
+            <p><span><i class="fas fa-search"></i></span> Looking for: @Model.AnimalModel.LookingFor</p>
+
+
+            @if (Model.AsMatching)
+            {
+                <h3>Owner</h3>
+                <p><span><i class="fas fa-user"></i></span> @Model.UserProfileModel.FirstName @Model.UserProfileModel.LastName</p>
+                <p><span><i class="fas fa-phone-alt"></i></span> @Model.UserProfileModel.PhoneNumber</p>
+                @*<button type="button" class="premium-button" title="Unmatch" onclick="Unmatch('@User.Identity.Name','@Model.AnimalModel.ForUser')" return false>Unmatch</button>*@
+                <button type="button" class="premium-button" title="Unmatch" onclick="UnmatchASP('@Model.AnimalModel.ForUser', 0)" return false>Unmatch</button>
+            }
+            else
+            {
+                @*<button type="button" class="premium-button" title="like back" onclick="LikeBack('@User.Identity.Name','@Model.AnimalModel.ForUser')" return false>Like Back</button>*@
+                <button type="button" class="premium-button" title="like back" onclick="LikeBackASP('@Model.AnimalModel.ForUser', 1)" return false>Like Back</button>
+            }
+
+
+            @section scripts{
+                <script type="text/javascript">
+                      function LikeBack(fromUser, toUser) {
+                            console.log(fromUser + " to " + toUser);
+                            //this invokes the c# method of our hub with the parameters needed to send the message to the other user
+                            connection.invoke("Like", fromUser, toUser)
+                                .then(function (result) {
+                                    console.log(result)
+                                    if (result == "Matched") {
+                                        //put toUser in Matches
+                                        window.location.href = "@Url.Action("MyMatches", "Home")";//go back to browse
+                                    }
+                                    else {
+                                        //failed or liked already
+                                    }
+                                    console.log(result);
+                                }, function (err) {
+                                    return console.error(err.toString());//error handling
+                                });
+                    }
+
+                    function Unmatch(fromUser, toUser) {
+                         console.log(fromUser + " to " + toUser);
+                         connection.invoke("Unlike", fromUser, toUser)
+                                .then(function (result) {
+                                    console.log(result)
+                                    window.location.href = "@Url.Action("MyMatches", "Home")";//go back to browse
+                                }, function (err) {
+                                    return console.error(err.toString());//error handling
+                                });
+
+
+                    }
+
+                    function LikeBackASP(toUser, t) {
+                        window.location.href = ("@Url.Action("MyMatches", "Home", new { username = "usernamevalue",  type = "1"})").replace("usernamevalue", t + ";" + toUser);
+                        //console.log(toUser +" "+ type)
+                    }
+
+                    function UnmatchASP(toUser, t) {
+                        window.location.href = ("@Url.Action("MyMatches", "Home", new { username = "usernamevalue", type = "0"})").replace("usernamevalue",  t + ";" + toUser);
+                         console.log(toUser +" "+ type)
+                    }
+                </script>
+            }
+        </section>
+    </article>
+</section>

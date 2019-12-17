@@ -496,15 +496,12 @@ span {
             color: #FFF;
         }
 
+
+/* VIEW YOUR PROFILE */
 .view {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 45px 0 45px;
-}
-
-.view-images {
-    grid-template-columns: repeat(auto-fill, minmax(1fr, auto));
-    margin-right: 30px
 }
 
 .view-h1 {
@@ -526,7 +523,7 @@ span {
 
 @media screen and (max-width: 735px) {
     .view {
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-columns: 1fr;
         margin: 0 15px 0 15px;
     }
 
@@ -535,8 +532,225 @@ span {
     }
 }
 
-@media screen and (max-width: 1307px) {
-    .view-image img {
+.gallery {
+    font-size: 0px;
+    padding-right: 30px;
+}
+
+    .gallery .image {
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        width: 33.33%;
+        padding: 0.5vh 0px 0px 0.5vh;
+    }
+
+        .gallery .image:first-of-type {
+            width: 100%;
+        }
+
+        .gallery .image img {
+            width: 100%;
+        }
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .gallery .image {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 736px) and (max-width: 1000px) {
+    .gallery .image {
         width: 100%;
     }
 }
+
+/***LANDING ***/
+.landing-h1 {
+    font-family: 'Finger Paint', cursive;
+    font-size: 64px;
+    margin-bottom: 0;
+}
+
+.ellipse {
+    position: absolute;
+    z-index: -1;
+    width: 600px;
+    height: 500px;
+    top: -40px;
+    background-image: url("../images/Ellipse.png");
+    background-position: center;
+    background-size: cover;
+    transition: 0.2s;
+}
+
+.new-user {
+    margin-top: 30px;
+}
+
+    .new-user .new-user-content {
+        margin-top: 100px;
+    }
+
+    .new-user img {
+        z-index: -2;
+        max-width: 650px;
+        margin: 0px auto;
+    }
+
+
+@media (max-width: 1000px) {
+    .ellipse {
+        width: 315px;
+        height: 270px;
+    }
+
+    .new-user .new-user-content {
+        margin-top: 0px;
+    }
+
+    .landing-h1 {
+        margin-top: 0px;
+    }
+}
+
+.featured {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 45px 0 45px;
+}
+
+    .featured h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        color: black;
+        margin-bottom: 0;
+    }
+
+    .featured p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        color: black;
+    }
+
+@media screen and (max-width: 735px) {
+    .featured {
+        margin: 0 15px 0 15px;
+    }
+}
+
+.featured-slider {
+    width: 100%;
+    height: 400px;
+    background-color: #F9F7F7;
+    margin-bottom: 100px;
+}
+
+
+.about {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 710px;
+}
+
+    .about h2 {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        color: #F15D68;
+        margin-bottom: 0;
+    }
+
+    .about hr {
+        width: 26px;
+        border-top: 2px solid #F15D68;
+    }
+
+    .about h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        color: black;
+        margin: 0;
+    }
+
+.about-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: initial;
+}
+
+@media screen and (max-width: 735px) {
+    .about-text {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 15px 20px 15px;
+    }
+}
+
+/* LIKES */
+.favorites-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    margin: 0 45px 0 45px;
+}
+
+    .favorites-container h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 26px;
+    }
+
+.liked {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+
+    .liked div {
+        max-width: 220px;
+        margin-bottom: 15px;
+    }
+
+    .liked p {
+        display: inline;
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+    }
+
+    .liked div img {
+        max-width: 30vw;
+    }
+
+    .liked i {
+        margin-left: 117px;
+    }
+
+        .liked i:hover {
+            cursor: pointer;
+            color: #F15D68;
+            transform: scale(1.8);
+            transition: 0.2s;
+        }
+
+@media screen and (max-width: 739px) {
+    .favorites-container {
+        display: grid;
+        margin: 0 15px 0 15px;
+    }
+}
+
+.animal_container {
+    transition: transform .25s ease;
+    transform: scale(1);
+}
+
+    .animal_container:hover {
+        transform: scale(1.07);
+    }

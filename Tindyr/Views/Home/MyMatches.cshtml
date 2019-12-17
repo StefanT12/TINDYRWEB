@@ -1,0 +1,54 @@
+﻿@model Tindyr.Models.Browse.MyMatchesModel
+@{
+    ViewData["Title"] = "MyMatches";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*@if (Model.UserIsValidated)
+    {*@
+@*@foreach (var animal in Model.Animals)
+    {
+        <section id=@animal.ForUser>
+            <img src=@Url.Content("~/userimages/"+animal.ForUser +"front" + ".jpg") alt="Anim_Pict" />
+            <p>@animal.AnimalName, @animal.AnimalBreed</p>
+            <input type="button" class="premium-button" onclick="LikeThisUser('@User.Identity.Name','@animal.ForUser')" value="Like">
+        </section>
+    }*@
+@*}*@
+
+<section class="content">
+    <div class="favorites-container">
+        <h1>See who liked you</h1>
+        <div class="liked" id="main">
+            @foreach (var animal in Model.WhoLikedYou)
+            {
+                <div type="button" onclick="GoViewDetails('@animal.ForUser')" class="animal_container">
+                    <img src=@Url.Content("~/userimages/"+animal.ForUser +"front" + ".jpg") alt="Anim_Pict">
+                    <p>@animal.AnimalName, @animal.GetYear()</p>
+                </div>
+            }
+
+
+        </div>
+
+        <h1>See who you matched with</h1>
+
+        <div class="liked" id="main">
+            @foreach (var animal in Model.Matches)
+            {
+                <div type="button" onclick="GoViewDetails('@animal.ForUser')" class="animal_container">
+                    <img src=@Url.Content("~/userimages/"+animal.ForUser +"front" + ".jpg") alt="Anim_Pict">
+                    <p>@animal.AnimalName, @animal.GetYear()</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+@section scripts{
+    <script type="text/javascript">
+        function GoViewDetails(username) {
+            window.location.href = ("@Url.Action("ViewOtherProfile", "ProfileEdit", new { username = "usernamevalue" })").replace("usernamevalue", username);
+        }
+    </script>
+}

@@ -19,5 +19,10 @@ namespace Tindyr.Models.ProfileEdit
             Email = vm.Email;
             PhoneNumber = vm.PhoneNumber;
         }
+
+        public bool GetIfValid()
+        {
+            return FirstName != null && LastName != null && Email != null && PhoneNumber != null;
+        }
     }
 }

@@ -6,6 +6,7 @@ using Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -28,28 +29,43 @@ namespace Application.Animals.Queries
 
             var animFoundList = new GetAnimalsListVM();
 
-            var animalFound = new Animal();
-
             foreach(var animal in animDbList)
             {
-                if (request.ByGenderAndType)
+                var valid = await AllInfoValid(animal);
+                
+                if (valid)
                 {
-                    if(animal.AnimalType.Equals(request.Type) && animal.AnimalGender.Equals(request.Gender))
+                    Animal animalFound = null;
+
+                    if (request.ByGenderAndType)
+                    {
+                        var animalGender = request.OppositeGender ? (request.Gender.Equals("female", System.StringComparison.OrdinalIgnoreCase) ? "Male" : "Female") : request.Gender;
+
+                        if (animal.AnimalType.Equals(request.Type) && animal.AnimalGender.Equals(animalGender))
+                        {
+                            animalFound = await AnimalHasMatchParam(animal, matchParam, request.ForUser);
+                        }
+                    }
+                    else
                     {
                         animalFound = await AnimalHasMatchParam(animal, matchParam, request.ForUser);
                     }
+
+                    if (animalFound != null)
+                    {
+                        var animalVM = _mapper.Map<GetAnimalVM>(animalFound);
+
+                        animFoundList.Animals.Add(animalVM);
+
+                    }
                 }
-                else
-                {
-                    animalFound = await AnimalHasMatchParam(animal, matchParam, request.ForUser);
-                }
-                
-                if(animalFound != null)
-                {
-                    var animalVM = _mapper.Map<GetAnimalVM>(animalFound);
-                    
-                    animFoundList.Animals.Add(animalVM);
-                }
+            }
+
+            //remove self
+            var self = animFoundList.Animals.SingleOrDefault(a => a.User.Username.Equals(request.ForUser));
+            if (self != null)
+            {
+                animFoundList.Animals.Remove(self);
             }
 
             return animFoundList;
@@ -61,7 +77,7 @@ namespace Application.Animals.Queries
             switch (matchParam)
             {
                 case AnimalMatchParam.UserIsLiked:
-                    match = await _context.Matches.FirstOrDefaultAsync(m => m.User2.Equals(forUser) && m.User2LikedBack == false);
+                    match = await _context.Matches.FirstOrDefaultAsync(m => m.User1.Equals(animal.User.Username) && m.User2.Equals(forUser) && m.User2LikedBack == false);
                     if (match != null)
                     {
                         return animal;
@@ -75,8 +91,8 @@ namespace Application.Animals.Queries
                     }
                     break;
                 case AnimalMatchParam.Strangers:
-                    match = await _context.Matches.FirstOrDefaultAsync(m => (!m.User2.Equals(animal.User.Username) && !m.User1.Equals(animal.User.Username)));
-                    if (match != null)
+                    match = await _context.Matches.FirstOrDefaultAsync(m => (!m.User2.Equals(animal.User.Username) || !m.User1.Equals(animal.User.Username)));
+                    if (match == null)
                     {
                         return animal;
                     }
@@ -90,6 +106,14 @@ namespace Application.Animals.Queries
                     break;
             }
             return null;
+        }
+
+        public async Task<bool> AllInfoValid(Animal animal)
+        {
+            var profile = await _context.UserProfiles.SingleOrDefaultAsync(p => p.ProfileOf == animal.UserId);
+            var animalValid = animal.AnimalName != null && animal.AnimalType != null && animal.AnimalGender != null && animal.AnimalBreed != null && animal.LookingFor != null;
+            var profileValid = profile.Email != null && profile.FirstName != null && profile.LastName != null && profile.PhoneNumber != null;
+            return profileValid && animalValid;
         }
     }
 }

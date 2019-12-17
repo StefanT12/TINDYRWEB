@@ -23,7 +23,16 @@ namespace Application.Users.Queries
 
         public async Task<UserProfileDetailsVM> Handle(GetUserProfile request, CancellationToken cancellationToken)
         {
-            var entity = await _dbContext.UserProfiles.FirstOrDefaultAsync(up => up.User.UserID == request.UserID);
+            UserProfile entity = null;
+            if (request.ByName)
+            {
+                entity = await _dbContext.UserProfiles.FirstOrDefaultAsync(up => up.User.Username.Equals(request.Username));
+            }
+            else
+            {
+                entity = await _dbContext.UserProfiles.FirstOrDefaultAsync(up => up.User.UserID == request.UserID);
+            }
+            
 
             return _mapper.Map<UserProfileDetailsVM>(entity);
         }
